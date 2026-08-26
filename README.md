@@ -124,39 +124,87 @@ No repositório: **Settings → Pages**
 
 Em 1–2 minutos o site fica no ar em `https://SEU_USUARIO.github.io/site/`.
 
-### 3. Apontar o domínio mullercapital.net
+### 3. Apontar o domínio mullercapital.net (Squarespace)
 
-O arquivo `CNAME` já está na pasta com o domínio — o GitHub vai detectá-lo sozinho.
-Falta configurar o DNS **no painel onde você comprou o domínio** (Registro.br, GoDaddy,
-Cloudflare, etc.).
+#### 3a. Primeiro no GitHub
 
-Crie **4 registros do tipo A**, todos com nome `@` (ou raiz/vazio):
+O arquivo `CNAME` já está na pasta com o domínio, então o GitHub deve detectá-lo sozinho.
+Confirme em **Settings → Pages → Custom domain** que aparece `mullercapital.net`.
+Se estiver vazio, digite `mullercapital.net` e clique em **Save**.
 
-| Tipo | Nome | Valor             |
+> A ordem importa: o GitHub recomenda cadastrar o domínio **antes** de mexer no DNS.
+
+#### 3b. Depois no Squarespace
+
+> ### ⚠️ NÃO APAGUE OS REGISTROS DE E-MAIL
+> O endereço `lmuller@mullercapital.net` roda no **Google Workspace** e depende destes
+> registros, que já existem no domínio:
+>
+> - **MX** → `aspmx.l.google.com`, `alt1`…`alt4.aspmx.l.google.com`
+> - **TXT** → `v=spf1 include:_spf.google.com ~all`
+>
+> Se você apagar qualquer um deles, **seu e-mail para de funcionar**. Eles não têm
+> nenhuma relação com o site — adicionar os registros A abaixo não os afeta.
+>
+> Antes de começar, tire um print da tela de DNS. Se algo quebrar, dá para voltar.
+
+1. Acesse <https://account.squarespace.com/domains>
+2. Clique no domínio **mullercapital.net**
+3. No painel lateral, clique em **DNS**
+4. Pode ser pedida a senha ou o código de dois fatores — confirme e clique em **Continue**
+
+**Não há nada para remover.** Hoje o domínio não tem nenhum registro **A** na raiz nem
+`www` configurado — ele simplesmente não aponta para nenhum site. Você só vai adicionar.
+
+(Se por algum motivo aparecer um registro **A** com nome `@` apontando para
+`198.185.159.x` / `198.49.23.x`, ou um **CNAME** `www` para `ext-cust.squarespace.com`,
+são padrões do Squarespace e aí sim precisam ser apagados — eles conflitam com o GitHub.)
+
+**Adicione os 4 registros A do GitHub.** Clique em **Add record** e preencha:
+
+| Type | Name | Data              |
 |------|------|-------------------|
 | A    | @    | 185.199.108.153   |
 | A    | @    | 185.199.109.153   |
 | A    | @    | 185.199.110.153   |
 | A    | @    | 185.199.111.153   |
 
-E **1 registro CNAME** para o `www`:
+Os quatro são obrigatórios — são servidores redundantes do GitHub, não alternativas.
+Deixe o **TTL** no padrão (4 horas).
 
-| Tipo  | Nome | Valor                    |
-|-------|------|--------------------------|
-| CNAME | www  | `SEU_USUARIO.github.io.` |
+**Adicione 1 registro CNAME** para o `www`:
 
-Depois, em **Settings → Pages → Custom domain**, confirme que aparece `mullercapital.net`
-e marque **Enforce HTTPS** (a opção só libera depois que o DNS propagar — pode levar de
-alguns minutos a 24h; o certificado é gratuito).
+| Type  | Name | Data                    |
+|-------|------|-------------------------|
+| CNAME | www  | `SEU_USUARIO.github.io` |
+
+Troque `SEU_USUARIO` pelo seu usuário do GitHub. É `usuario.github.io` — **sem** o nome
+do repositório no final.
+
+#### 3c. Ativar HTTPS
+
+Volte em **Settings → Pages** no GitHub e marque **Enforce HTTPS**.
+A opção fica cinza até o DNS propagar (normalmente minutos, às vezes até 24h).
+O certificado é gratuito e automático.
 
 ### 4. Conferir se está no ar
 
 - Abra `https://mullercapital.net` numa aba anônima (evita cache).
 - Teste no celular.
 - Cole o link no WhatsApp e veja se aparece título, descrição e foto.
+- **Mande um e-mail de teste para `lmuller@mullercapital.net`** e confirme que chegou.
 
 Se aparecer erro 404 logo depois de publicar, espere 2 minutos e recarregue —
 o GitHub leva um instante para montar o site.
+
+Para checar se o DNS já propagou, rode no PowerShell:
+
+```powershell
+Resolve-DnsName mullercapital.net -Type A
+```
+
+Deve responder com os quatro endereços `185.199.10x.153`. Enquanto aparecerem os
+antigos (`198.185.x` do Squarespace), ainda não propagou — é só esperar.
 
 ---
 
@@ -206,19 +254,35 @@ Se um arquivo faltar, o site continua funcionando (no topo aparece um marcador "
 
 ### Formulário de contato
 
-Hoje o formulário **abre o aplicativo de e-mail do visitante** já preenchido, endereçado a
-`lmuller@mullercapital.net`. Não exige nenhum serviço externo.
+O formulário envia via **Formspree**: a mensagem chega direto em
+`lmuller@mullercapital.net` sem o visitante sair da página.
 
-Se um dia quiser receber as mensagens direto no e-mail (sem depender do app do visitante):
+**Como está ligado:** a única coisa que define o destino é o `action` do formulário,
+em `index.html`:
 
-1. Crie uma conta grátis em <https://formspree.io> (50 mensagens/mês no plano free).
-2. Crie um formulário e copie o ID (algo como `xyzabcd`).
-3. Em `index.html`, troque a linha do formulário:
-   - de `action="mailto:lmuller@mullercapital.net" method="post" enctype="text/plain"`
-   - para `action="https://formspree.io/f/xyzabcd" method="POST"`
+```html
+<form class="contact-form" id="contact-form" action="https://formspree.io/f/xoeqajvz" method="POST">
+```
 
-O JavaScript já detecta a mudança e passa a enviar via AJAX, mostrando a confirmação
-na própria página. Nada mais precisa ser alterado.
+O JavaScript decide sozinho o que fazer:
+
+- `action` começando com `https://` → envia via AJAX e mostra a confirmação na página
+- `action` começando com `mailto:` → abre o app de e-mail do visitante (modo antigo)
+
+Para voltar ao modo antigo, é só trocar o `action` de volta para
+`mailto:lmuller@mullercapital.net` (e devolver `method="post" enctype="text/plain"`).
+
+**Plano gratuito do Formspree:** 50 mensagens por mês, formulários ilimitados,
+filtro de spam e histórico de 30 dias no painel.
+
+> ⚠️ No plano gratuito o painel guarda as mensagens por **apenas 30 dias**.
+> O e-mail que você recebe é a cópia permanente — não apague.
+> Passando de 50 mensagens/mês, o Formspree para de aceitar até virar o mês
+> (planos pagos começam em US$ 10/mês para 1.000 mensagens).
+
+**Proteção anti-spam:** o formulário tem um campo invisível (`_gotcha`) que pessoas não
+veem e robôs preenchem. Se vier preenchido, a mensagem é descartada em silêncio.
+O Formspree também reconhece esse nome de campo nativamente. **Não remova esse bloco.**
 
 ### Textos, preços e números
 

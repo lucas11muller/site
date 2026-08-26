@@ -694,6 +694,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   background: var(--white);
 }
 .contact-form .btn-block { grid-column: 1 / -1; }
+/* Campo anti-spam: fora da tela, invisível para pessoas e leitores de tela */
+.field-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form .btn-block[disabled] { opacity: 0.6; cursor: not-allowed; }
 .form-status { grid-column: 1 / -1; font-size: 0.9rem; text-align: center; min-height: 1em; }
 .form-status.ok { color: #1c7c4a; }
 .form-status.err { color: #c0392b; }

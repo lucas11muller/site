@@ -29,10 +29,20 @@ if (toggle && menu) {
 // Se o action for trocado por um endpoint HTTP (ex.: Formspree), envia via AJAX.
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
+const submitBtn = document.getElementById("form-submit");
 
 if (form) {
   form.addEventListener("submit", async (e) => {
     const action = form.getAttribute("action") || "";
+
+    // Anti-spam: se o campo invisível veio preenchido, é robô.
+    // Finge que deu certo para o robô não tentar de novo.
+    if (form.querySelector('[name="_gotcha"]')?.value) {
+      e.preventDefault();
+      form.reset();
+      setStatus("Mensagem enviada com sucesso! Retornarei em breve.", "ok");
+      return;
+    }
 
     // Fallback por e-mail: monta um mailto mais legível do que o POST nativo
     if (action.startsWith("mailto:")) {
@@ -56,7 +66,18 @@ if (form) {
 
     // Envio AJAX para endpoint HTTP (sem recarregar a página)
     e.preventDefault();
+
+    // Assunto mais útil na caixa de entrada: inclui o interesse escolhido
+    const assuntoCampo = document.getElementById("form-subject");
+    if (assuntoCampo) {
+      const interesse = form.querySelector('[name="interesse"]')?.value;
+      assuntoCampo.value = interesse
+        ? `Contato pelo site — ${interesse}`
+        : "Contato pelo site — Muller Capital";
+    }
+
     setStatus("Enviando...", "");
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Enviando..."; }
     try {
       const resp = await fetch(action, {
         method: "POST",
@@ -67,10 +88,21 @@ if (form) {
         form.reset();
         setStatus("Mensagem enviada com sucesso! Retornarei em breve.", "ok");
       } else {
-        setStatus("Não foi possível enviar. Tente novamente ou escreva para lmuller@mullercapital.net.", "err");
+        // O Formspree devolve o motivo em JSON quando algo está errado
+        let motivo = "";
+        try {
+          const j = await resp.json();
+          motivo = j?.errors?.map((x) => x.message).join(" ") || "";
+        } catch (_) { /* resposta sem JSON */ }
+        setStatus(
+          motivo || "Não foi possível enviar. Tente novamente ou escreva para lmuller@mullercapital.net.",
+          "err"
+        );
       }
     } catch (err) {
       setStatus("Erro de conexão. Escreva para lmuller@mullercapital.net.", "err");
+    } finally {
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Enviar mensagem"; }
     }
   });
 }

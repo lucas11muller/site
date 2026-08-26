@@ -468,8 +468,8 @@
         </ul>
       </div>
 
-      <!-- Formulário: abre o app de e-mail do visitante já preenchido (ver README para trocar por Formspree) -->
-      <form class="contact-form" id="contact-form" action="mailto:lmuller@mullercapital.net" method="post" enctype="text/plain">
+      <!-- Formulário: envia via Formspree direto para lmuller@mullercapital.net (ver README) -->
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/xoeqajvz" method="POST">
         <div class="field">
           <label for="nome">Nome</label>
           <input type="text" id="nome" name="nome" autocomplete="name" required />
@@ -496,7 +496,14 @@
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o evento ou desafio..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
+        <!-- Assunto do e-mail que chega na sua caixa. O JS atualiza com o interesse escolhido. -->
+        <input type="hidden" name="_subject" id="form-subject" value="Contato pelo site — Muller Capital" />
+        <!-- Anti-spam: campo invisível. Pessoas não preenchem; robôs sim. Não remover. -->
+        <div class="field-hp" aria-hidden="true">
+          <label for="_gotcha">Deixe este campo em branco</label>
+          <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" id="form-submit">Enviar mensagem</button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </div>
