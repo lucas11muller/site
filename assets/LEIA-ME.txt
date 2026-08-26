@@ -1,0 +1,18 @@
+COLOQUE SUAS FOTOS NESTA PASTA
+==============================
+
+Salve as imagens com EXATAMENTE estes nomes (tudo minúsculo):
+
+  lucas.jpg            -> Headshot profissional (o retrato em preto e branco). Topo do site.
+  palestra-office.jpg  -> Você palestrando no escritório (slide "comprador B2B"). Galeria - destaque.
+  midia-globo.jpg      -> Print da entrevista na TV Globo. Galeria - recebe o selo "Na mídia".
+  palestra-fesp.jpg    -> Você palestrando na FESP. Galeria.
+  palestra-3.jpg       -> Palestra para plateia. Galeria.
+  palestra-4.jpg       -> Workshop in-company (sala corporativa). Galeria.
+  india-campo.jpg      -> Visita de campo na Índia (plantação de pimenta). Galeria.
+
+Dicas:
+- O headshot fica melhor em proporção retrato (ex.: 800 x 1000 px).
+- As fotos da galeria podem ser de qualquer proporção; o site recorta sozinho.
+- Se um arquivo faltar, o site continua funcionando: o espaço fica vazio
+  (no topo aparece um marcador com as iniciais "LM").
