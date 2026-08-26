@@ -442,22 +442,31 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .brio-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
 
 /* ===================== IA APLICADA ===================== */
-.ia-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
-.ia-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 30px 26px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+.ia-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
+.ia-intro { position: sticky; top: 100px; }
+.ia-intro h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
+.ia-lead { color: var(--slate); font-size: 1.06rem; margin-bottom: 30px; }
+
+.ia-list { list-style: none; display: grid; }
+.ia-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
 }
-.ia-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--gold); }
-.ia-icon { font-size: 1.8rem; margin-bottom: 14px; }
-.ia-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--ink); }
-.ia-card > p { color: var(--slate); margin-bottom: 18px; font-size: 0.98rem; }
-.ia-card .card-list { margin-bottom: 0; margin-top: auto; }
-.ia-cta { text-align: center; margin-top: 40px; }
+.ia-item:first-child { border-top: none; padding-top: 0; }
+.ia-item:last-child { padding-bottom: 0; }
+.ia-num {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--gold-dark);
+}
+.ia-body h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--ink); }
+.ia-body > p { color: var(--slate); font-size: 0.99rem; margin-bottom: 15px; }
+.ia-body .card-list { margin-bottom: 0; }
 
 /* ===================== GRÁFICO DE CRESCIMENTO ===================== */
 .growth-chart {
@@ -825,7 +834,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-figure { max-width: 360px; }
   .cards { grid-template-columns: 1fr; }
-  .ia-grid { grid-template-columns: 1fr; }
+  .ia-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ia-intro { position: static; }
   .brio-grid { grid-template-columns: repeat(2, 1fr); }
   .brio-quote { font-size: 1.12rem; }
   .stats { grid-template-columns: repeat(2, 1fr); }
@@ -1045,66 +1055,69 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 
   <!-- ===================== IA APLICADA ===================== -->
   <section id="ia" class="section">
-    <div class="container">
-      <div class="section-head">
+    <div class="container ia-grid">
+      <div class="ia-intro">
         <p class="section-eyebrow">Inteligência Artificial</p>
         <h2>IA aplicada ao resultado — não à demonstração.</h2>
-        <p class="section-sub">
+        <p class="ia-lead">
           A maioria das empresas já testou IA. Poucas transformaram isso em decisão melhor,
           custo menor ou receita maior. Meu trabalho é a ponte entre a ferramenta e o P&amp;L.
         </p>
-      </div>
-
-      <div class="ia-grid">
-        <article class="ia-card">
-          <div class="ia-icon" aria-hidden="true">🎯</div>
-          <h3>Capacitação de times</h3>
-          <p>
-            Workshops práticos para times comerciais, de compras e de estratégia usarem IA no
-            trabalho real — não em teoria.
-          </p>
-          <ul class="card-list">
-            <li>Casos de uso por função (comercial, compras, supply)</li>
-            <li>Prompts e fluxos aplicados à rotina da equipe</li>
-            <li>Critérios de qualidade e verificação de respostas</li>
-            <li>Ganho de produtividade mensurável</li>
-          </ul>
-        </article>
-
-        <article class="ia-card">
-          <div class="ia-icon" aria-hidden="true">📊</div>
-          <h3>IA na estratégia e nas decisões</h3>
-          <p>
-            Como uso IA dentro dos meus próprios projetos de consultoria e advisory para
-            decidir mais rápido e com mais base.
-          </p>
-          <ul class="card-list">
-            <li>Inteligência de mercado e benchmarking</li>
-            <li>Análise de cenários e simulações</li>
-            <li>Should-cost, TCO e preparação de negociação</li>
-            <li>Leitura de grandes volumes de dados em horas, não semanas</li>
-          </ul>
-        </article>
-
-        <article class="ia-card">
-          <div class="ia-icon" aria-hidden="true">🏛️</div>
-          <h3>Uso executivo de IA — C-Level &amp; Board</h3>
-          <p>
-            Sessões fechadas para diretoria e conselho: o que a IA realmente muda no negócio,
-            sem hype e sem jargão técnico.
-          </p>
-          <ul class="card-list">
-            <li>O que muda — e o que não muda — na estratégia</li>
-            <li>Onde investir agora e onde esperar</li>
-            <li>Governança, risco e conformidade</li>
-            <li>IA no dia a dia do próprio executivo</li>
-          </ul>
-        </article>
-      </div>
-
-      <p class="ia-cta">
         <a href="#contato" class="btn btn-primary">Conversar sobre IA na sua empresa</a>
-      </p>
+      </div>
+
+      <ol class="ia-list">
+        <li class="ia-item">
+          <span class="ia-num" aria-hidden="true">01</span>
+          <div class="ia-body">
+            <h3>Capacitação de times</h3>
+            <p>
+              Workshops práticos para times comerciais, de compras e de estratégia usarem IA no
+              trabalho real — não em teoria.
+            </p>
+            <ul class="card-list">
+              <li>Casos de uso por função (comercial, compras, supply)</li>
+              <li>Prompts e fluxos aplicados à rotina da equipe</li>
+              <li>Critérios de qualidade e verificação de respostas</li>
+              <li>Ganho de produtividade mensurável</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="ia-item">
+          <span class="ia-num" aria-hidden="true">02</span>
+          <div class="ia-body">
+            <h3>IA na estratégia e nas decisões</h3>
+            <p>
+              Como uso IA dentro dos meus próprios projetos de consultoria e advisory para
+              decidir mais rápido e com mais base.
+            </p>
+            <ul class="card-list">
+              <li>Inteligência de mercado e benchmarking</li>
+              <li>Análise de cenários e simulações</li>
+              <li>Should-cost, TCO e preparação de negociação</li>
+              <li>Leitura de grandes volumes de dados em horas, não semanas</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="ia-item">
+          <span class="ia-num" aria-hidden="true">03</span>
+          <div class="ia-body">
+            <h3>Uso executivo de IA — C-Level &amp; Board</h3>
+            <p>
+              Sessões fechadas para diretoria e conselho: o que a IA realmente muda no negócio,
+              sem hype e sem jargão técnico.
+            </p>
+            <ul class="card-list">
+              <li>O que muda — e o que não muda — na estratégia</li>
+              <li>Onde investir agora e onde esperar</li>
+              <li>Governança, risco e conformidade</li>
+              <li>IA no dia a dia do próprio executivo</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 

@@ -411,22 +411,31 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .brio-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
 
 /* ===================== IA APLICADA ===================== */
-.ia-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
-.ia-card {
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 30px 26px;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+.ia-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
+.ia-intro { position: sticky; top: 100px; }
+.ia-intro h2 { font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
+.ia-lead { color: var(--slate); font-size: 1.06rem; margin-bottom: 30px; }
+
+.ia-list { list-style: none; display: grid; }
+.ia-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 22px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
 }
-.ia-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--gold); }
-.ia-icon { font-size: 1.8rem; margin-bottom: 14px; }
-.ia-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--ink); }
-.ia-card > p { color: var(--slate); margin-bottom: 18px; font-size: 0.98rem; }
-.ia-card .card-list { margin-bottom: 0; margin-top: auto; }
-.ia-cta { text-align: center; margin-top: 40px; }
+.ia-item:first-child { border-top: none; padding-top: 0; }
+.ia-item:last-child { padding-bottom: 0; }
+.ia-num {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--gold-dark);
+}
+.ia-body h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--ink); }
+.ia-body > p { color: var(--slate); font-size: 0.99rem; margin-bottom: 15px; }
+.ia-body .card-list { margin-bottom: 0; }
 
 /* ===================== GRÁFICO DE CRESCIMENTO ===================== */
 .growth-chart {
@@ -794,7 +803,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-figure { max-width: 360px; }
   .cards { grid-template-columns: 1fr; }
-  .ia-grid { grid-template-columns: 1fr; }
+  .ia-grid { grid-template-columns: 1fr; gap: 40px; }
+  .ia-intro { position: static; }
   .brio-grid { grid-template-columns: repeat(2, 1fr); }
   .brio-quote { font-size: 1.12rem; }
   .stats { grid-template-columns: repeat(2, 1fr); }
