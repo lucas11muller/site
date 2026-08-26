@@ -110,7 +110,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.95rem;
+  flex: none;
 }
+.brand-mark svg { display: block; }
 .brand-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); }
 
 .nav-menu { list-style: none; display: flex; align-items: center; gap: 30px; }
@@ -407,6 +409,24 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 }
 .brio-card h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 10px; }
 .brio-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
+
+/* ===================== IA APLICADA ===================== */
+.ia-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.ia-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ia-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--gold); }
+.ia-icon { font-size: 1.8rem; margin-bottom: 14px; }
+.ia-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--ink); }
+.ia-card > p { color: var(--slate); margin-bottom: 18px; font-size: 0.98rem; }
+.ia-card .card-list { margin-bottom: 0; margin-top: auto; }
+.ia-cta { text-align: center; margin-top: 40px; }
 
 /* ===================== GRÁFICO DE CRESCIMENTO ===================== */
 .growth-chart {
@@ -705,8 +725,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .site-footer { background: var(--graphite); color: rgba(255, 255, 255, 0.7); padding: 28px 0; }
 .footer-wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.88rem; }
 .footer-brand { font-family: var(--font-display); color: var(--white); font-size: 1.05rem; }
-.footer-realizacao { display: flex; flex-direction: column; gap: 4px; }
-.footer-realizacao-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.footer-realizacao { display: flex; align-items: center; }
 .footer-logo { height: 34px; width: auto; }
 .footer-top:hover { color: var(--gold); }
 
@@ -775,6 +794,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-figure { max-width: 360px; }
   .cards { grid-template-columns: 1fr; }
+  .ia-grid { grid-template-columns: 1fr; }
   .brio-grid { grid-template-columns: repeat(2, 1fr); }
   .brio-quote { font-size: 1.12rem; }
   .stats { grid-template-columns: repeat(2, 1fr); }

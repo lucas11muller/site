@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lucas Müller — Palestras, Treinamentos e Consultoria em Planejamento Estratégico</title>
-  <meta name="description" content="Lucas Müller — executivo com 15+ anos em estratégia, negociação global e liderança. Palestras, treinamentos e consultoria em planejamento estratégico para empresas." />
+  <title>Muller Capital — Palestras, Treinamentos e Consultoria em Planejamento Estratégico</title>
+  <meta name="description" content="Muller Capital — palestras, treinamentos e consultoria em planejamento estratégico, negociação global e liderança, conduzidos por Lucas Müller, executivo com mais de 15 anos em mercados globais." />
   <meta name="author" content="Lucas Müller" />
   <!-- Site público: indexável por buscadores -->
   <meta name="robots" content="index, follow" />
@@ -13,18 +13,18 @@
   <!-- Open Graph / compartilhamento social -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mullercapital.net/" />
-  <meta property="og:site_name" content="Lucas Müller" />
-  <meta property="og:title" content="Lucas Müller — Planejamento Estratégico" />
-  <meta property="og:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global." />
+  <meta property="og:site_name" content="Muller Capital" />
+  <meta property="og:title" content="Muller Capital — Planejamento Estratégico" />
+  <meta property="og:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global, com Lucas Müller." />
   <meta property="og:image" content="https://mullercapital.net/assets/lucas.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lucas Müller — Planejamento Estratégico" />
-  <meta name="twitter:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global." />
+  <meta name="twitter:title" content="Muller Capital — Planejamento Estratégico" />
+  <meta name="twitter:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global, com Lucas Müller." />
   <meta name="twitter:image" content="https://mullercapital.net/assets/lucas.jpg" />
   <meta name="theme-color" content="#0f1f33" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230f1f33'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%23c8a35a' text-anchor='middle'%3ELM%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%230f1f33'/%3E%3Cpath%20d='M8%2044%20L17%2029%20L26%2044%20Z'%20fill='%23c8a35a'%20opacity='.6'/%3E%3Cpath%20d='M40%2044%20L48%2031%20L56%2044%20Z'%20fill='%23c8a35a'%20opacity='.45'/%3E%3Cpath%20d='M18%2044%20L32%2020%20L46%2044%20Z'%20fill='%23c8a35a'/%3E%3Cpath%20d='M9%2047%20H55'%20stroke='%23c8a35a'%20stroke-width='3'%20stroke-linecap='round'%20opacity='.8'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -141,7 +141,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 0.95rem;
+  flex: none;
 }
+.brand-mark svg { display: block; }
 .brand-name { font-family: var(--font-display); font-size: 1.15rem; color: var(--white); }
 
 .nav-menu { list-style: none; display: flex; align-items: center; gap: 30px; }
@@ -438,6 +440,24 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 }
 .brio-card h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 10px; }
 .brio-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
+
+/* ===================== IA APLICADA ===================== */
+.ia-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }
+.ia-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px 26px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.ia-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); border-color: var(--gold); }
+.ia-icon { font-size: 1.8rem; margin-bottom: 14px; }
+.ia-card h3 { font-size: 1.2rem; margin-bottom: 10px; color: var(--ink); }
+.ia-card > p { color: var(--slate); margin-bottom: 18px; font-size: 0.98rem; }
+.ia-card .card-list { margin-bottom: 0; margin-top: auto; }
+.ia-cta { text-align: center; margin-top: 40px; }
 
 /* ===================== GRÁFICO DE CRESCIMENTO ===================== */
 .growth-chart {
@@ -736,8 +756,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .site-footer { background: var(--graphite); color: rgba(255, 255, 255, 0.7); padding: 28px 0; }
 .footer-wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.88rem; }
 .footer-brand { font-family: var(--font-display); color: var(--white); font-size: 1.05rem; }
-.footer-realizacao { display: flex; flex-direction: column; gap: 4px; }
-.footer-realizacao-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.footer-realizacao { display: flex; align-items: center; }
 .footer-logo { height: 34px; width: auto; }
 .footer-top:hover { color: var(--gold); }
 
@@ -806,6 +825,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-figure { max-width: 360px; }
   .cards { grid-template-columns: 1fr; }
+  .ia-grid { grid-template-columns: 1fr; }
   .brio-grid { grid-template-columns: repeat(2, 1fr); }
   .brio-quote { font-size: 1.12rem; }
   .stats { grid-template-columns: repeat(2, 1fr); }
@@ -850,8 +870,15 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a href="#top" class="brand">
-        <span class="brand-mark">LM</span>
-        <span class="brand-name">Lucas&nbsp;Müller</span>
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 26" width="22" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 20 L6.5 11 L12 20 Z" fill="currentColor" opacity="0.6" />
+            <path d="M20 20 L25 12 L30 20 Z" fill="currentColor" opacity="0.45" />
+            <path d="M7 20 L16 4.5 L25 20 Z" fill="currentColor" />
+            <path d="M1.5 21.6 H30.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.8" />
+          </svg>
+        </span>
+        <span class="brand-name">Muller&nbsp;Capital</span>
       </a>
       <nav class="nav" aria-label="Navegação principal">
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
@@ -860,6 +887,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="#metodo">Método</a></li>
+          <li><a href="#ia">IA</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#resultados">Resultados</a></li>
           <li><a href="#acao">Em ação</a></li>
@@ -889,7 +917,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <ul class="hero-trust">
           <li><strong>+15</strong> anos gerando negócios</li>
           <li><strong>R$ 2,5 bi</strong> em negócios</li>
-          <li><strong>13+</strong> países de atuação</li>
+          <li><strong>+25</strong> países de atuação</li>
         </ul>
       </div>
       <div class="hero-figure">
@@ -941,30 +969,33 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
       </div>
       <div class="about-body">
         <p>
-          Atuo há mais de 15 anos na interseção entre <strong>estratégia, negociação e liderança</strong>,
+          Atuo há mais de 15 anos conectando <strong>estratégia, negociação e liderança</strong>,
           com responsabilidade direta sobre P&amp;L, equipes multifuncionais e operações em China, Índia,
           Europa, Estados Unidos e América Latina.
         </p>
         <p>
-          Como Diretor de Negócios, lidero <strong>27 profissionais</strong> e tenho assento no board,
-          contribuindo para decisões de crescimento, capital e portfólio. Negociei mais de
-          <strong>R$ 2,5 bilhões</strong> em transações e geri <strong>mais de 2.000 acordos comerciais</strong>
-          com clientes e fornecedores em 13 países, conduzindo um crescimento de <strong>400% em cinco anos</strong>.
+          Como Diretor de Negócios, lidero <strong>27 profissionais</strong> diretamente e faço parte do
+          <strong>Board Global</strong>, contribuindo para decisões de crescimento, capital e portfólio.
+          Negociei mais de <strong>R$ 2,5 bilhões</strong> em transações em minha carreira e geri
+          <strong>mais de 2.000 acordos comerciais</strong> com clientes e fornecedores em
+          <strong>mais de 25 países</strong>, conduzindo um crescimento de <strong>400% em cinco anos</strong>.
         </p>
         <p>
           Levo essa vivência para a sala de aula, o palco e a mesa de reunião: traduzo planejamento
-          estratégico em <strong>decisões executáveis</strong>, com método, dados e foco em resultado.
-          Tudo isso sustentado por formação executiva em Oxford, LSE, MIT Sloan, SDA Bocconi e TUM.
+          estratégico em <strong>decisões executáveis</strong>, removendo o ruído entre shareholders
+          &amp; o time, com método, dados e foco em resultado. Tudo isso sustentado por formação
+          executiva em Oxford, London School of Economics, MIT Sloan, SDA Bocconi e TUM.
         </p>
         <blockquote class="about-highlight">
           Com um investimento de <strong>R$ 750 mil</strong>, transformei um negócio em uma operação de
-          <strong>R$ 40 milhões em 5 anos</strong> — estratégia certa, executada com disciplina.
+          <strong>+R$ 40 milhões em 5 anos</strong> — estratégia certa, executada com disciplina
+          &amp; com foco em resultados palpáveis.
         </blockquote>
         <ul class="about-points">
           <li>Planejamento estratégico e execução disciplinada</li>
-          <li>Negociação internacional e gestão de stakeholders C-level</li>
+          <li>Negociação internacional e gestão de stakeholders C-level &amp; investidores</li>
           <li>Liderança de equipes globais e desenvolvimento de talentos</li>
-          <li>Resiliência de cadeia, gestão de riscos e sustentabilidade (ESG)</li>
+          <li>Diagnóstico financeiro, oportunidades de redução de custo e resiliência da cadeia de abastecimento</li>
         </ul>
       </div>
     </div>
@@ -991,7 +1022,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <article class="brio-card">
           <span class="brio-letter">B</span>
           <h3>Brilhante</h3>
-          <p>De extrema originalidade e inventividade — soluções excepcionais e excelentes.</p>
+          <p>De extrema originalidade e inventividade: soluções únicas e excelentes para seus clientes.</p>
         </article>
         <article class="brio-card">
           <span class="brio-letter">R</span>
@@ -1001,14 +1032,79 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <article class="brio-card">
           <span class="brio-letter">I</span>
           <h3>Inovador</h3>
-          <p>Aplica novas ideias para melhorar cenários e gerar resultados concretos.</p>
+          <p>Aplica novas ideias para melhorar cenários &amp; gerar resultados concretos.</p>
         </article>
         <article class="brio-card">
           <span class="brio-letter">O</span>
           <h3>Obsessivo</h3>
-          <p>Necessidade intensa de realizar, com compromisso emocional pela entrega.</p>
+          <p>Necessidade intensa de realizar, com compromisso vital pela entrega.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- ===================== IA APLICADA ===================== -->
+  <section id="ia" class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Inteligência Artificial</p>
+        <h2>IA aplicada ao resultado — não à demonstração.</h2>
+        <p class="section-sub">
+          A maioria das empresas já testou IA. Poucas transformaram isso em decisão melhor,
+          custo menor ou receita maior. Meu trabalho é a ponte entre a ferramenta e o P&amp;L.
+        </p>
+      </div>
+
+      <div class="ia-grid">
+        <article class="ia-card">
+          <div class="ia-icon" aria-hidden="true">🎯</div>
+          <h3>Capacitação de times</h3>
+          <p>
+            Workshops práticos para times comerciais, de compras e de estratégia usarem IA no
+            trabalho real — não em teoria.
+          </p>
+          <ul class="card-list">
+            <li>Casos de uso por função (comercial, compras, supply)</li>
+            <li>Prompts e fluxos aplicados à rotina da equipe</li>
+            <li>Critérios de qualidade e verificação de respostas</li>
+            <li>Ganho de produtividade mensurável</li>
+          </ul>
+        </article>
+
+        <article class="ia-card">
+          <div class="ia-icon" aria-hidden="true">📊</div>
+          <h3>IA na estratégia e nas decisões</h3>
+          <p>
+            Como uso IA dentro dos meus próprios projetos de consultoria e advisory para
+            decidir mais rápido e com mais base.
+          </p>
+          <ul class="card-list">
+            <li>Inteligência de mercado e benchmarking</li>
+            <li>Análise de cenários e simulações</li>
+            <li>Should-cost, TCO e preparação de negociação</li>
+            <li>Leitura de grandes volumes de dados em horas, não semanas</li>
+          </ul>
+        </article>
+
+        <article class="ia-card">
+          <div class="ia-icon" aria-hidden="true">🏛️</div>
+          <h3>Uso executivo de IA — C-Level &amp; Board</h3>
+          <p>
+            Sessões fechadas para diretoria e conselho: o que a IA realmente muda no negócio,
+            sem hype e sem jargão técnico.
+          </p>
+          <ul class="card-list">
+            <li>O que muda — e o que não muda — na estratégia</li>
+            <li>Onde investir agora e onde esperar</li>
+            <li>Governança, risco e conformidade</li>
+            <li>IA no dia a dia do próprio executivo</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="ia-cta">
+        <a href="#contato" class="btn btn-primary">Conversar sobre IA na sua empresa</a>
+      </p>
     </div>
   </section>
 
@@ -1028,10 +1124,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
           <h3>Palestras &amp; Keynotes</h3>
           <p>Conteúdo inspirador e prático para eventos corporativos, convenções e lideranças, com histórias reais de quem negociou e executou em escala global.</p>
           <ul class="card-list">
-            <li>Planejamento estratégico em cenários de volatilidade</li>
-            <li>Negociação global de alto impacto</li>
-            <li>Liderança de equipes multiculturais</li>
-            <li>Sourcing responsável, ESG e cadeia resiliente</li>
+            <li>Planejamento estratégico &amp; gestão integrada de resultados</li>
+            <li>Negociação global de alto impacto &amp; desenvolvimento de negócios</li>
+            <li>Liderança de equipes multiculturais &amp; times de alta performance</li>
+            <li>Marketing, Logística &amp; Procurement como base de resultados</li>
           </ul>
           <p class="card-aud"><span>Para:</span> convenções, eventos de liderança e times comerciais.</p>
           <p class="card-price">
@@ -1050,9 +1146,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
           <p>Programas in-company para desenvolver competências de estratégia e negociação, com frameworks aplicáveis ao dia a dia da sua equipe.</p>
           <ul class="card-list">
             <li>Planejamento estratégico na prática (OKRs &amp; KPIs)</li>
-            <li>Negociação avançada e gestão de fornecedores (SRM)</li>
-            <li>Gestão de categorias, TCO e should-cost</li>
-            <li>S&amp;OP e planejamento integrado de demanda</li>
+            <li>Negociação avançada &amp; gestão de fornecedores (SRM)</li>
+            <li>Ferramentas de Inteligência Artificial &amp; aplicação real</li>
+            <li>Desenvolvimento de negócios &amp; marketing B2B</li>
           </ul>
           <p class="card-aud"><span>Para:</span> equipes de estratégia, compras, comercial e supply.</p>
           <p class="card-price">
@@ -1079,10 +1175,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
           <a href="#contato" class="card-link">Iniciar um projeto &rarr;</a>
         </article>
 
-        <!-- Conselheiro / Advisor -->
+        <!-- Advisor & Operating Partner -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">🤝</div>
-          <h3>Conselheiro / Advisor</h3>
+          <h3>Advisor &amp; Operating Partner</h3>
           <p>Apoio recorrente ao board, founders e à alta liderança — uma visão externa e experiente para decisões de crescimento, capital e estratégia de longo prazo.</p>
           <ul class="card-list">
             <li>Assento consultivo em conselho (advisory board)</li>
@@ -1131,7 +1227,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <div class="stat"><span class="stat-num">+500</span><span class="stat-label">profissionais treinados</span></div>
         <div class="stat"><span class="stat-num">+20</span><span class="stat-label">mentorados</span></div>
         <div class="stat"><span class="stat-num">+10</span><span class="stat-label">startups como advisor</span></div>
-        <div class="stat"><span class="stat-num">2.000+</span><span class="stat-label">acordos comerciais geridos</span></div>
+        <div class="stat"><span class="stat-num">+2.000</span><span class="stat-label">acordos comerciais geridos</span></div>
         <div class="stat"><span class="stat-num">27</span><span class="stat-label">profissionais liderados</span></div>
         <div class="stat"><span class="stat-num">7,4%</span><span class="stat-label">de savings médio em categorias-chave</span></div>
         <div class="stat"><span class="stat-num">33%</span><span class="stat-label">de redução de exposição a risco</span></div>
@@ -1302,7 +1398,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
             <option value="Palestra">Palestra / Keynote</option>
             <option value="Treinamento">Treinamento / Workshop</option>
             <option value="Consultoria">Consultoria em Planejamento Estratégico</option>
-            <option value="Advisor">Conselheiro / Advisor</option>
+            <option value="Advisor &amp; Operating Partner">Advisor &amp; Operating Partner</option>
             <option value="Outro">Outro</option>
           </select>
         </div>
@@ -1327,10 +1423,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   <footer class="site-footer">
     <div class="container footer-wrap">
       <div class="footer-realizacao">
-        <span class="footer-realizacao-label">uma realização</span>
         <img src="assets/muller-capital.png" alt="Muller Capital" class="footer-logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'footer-brand',textContent:'Muller Capital'}))" />
       </div>
-      <span class="footer-copy">© <span id="year"></span> Lucas Müller · Muller Capital Ltda. Todos os direitos reservados.</span>
+      <span class="footer-copy">© <span id="year"></span> Muller Capital Ltda. Todos os direitos reservados.</span>
       <a href="#top" class="footer-top">Voltar ao topo &uarr;</a>
     </div>
   </footer>
