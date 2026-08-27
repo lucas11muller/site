@@ -38,7 +38,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/styles.css?v=3" />
 
   <script type="application/ld+json">
   {
@@ -103,16 +103,22 @@
 
   <!-- ===================== PÁGINA DO MATERIAL ===================== -->
   <article class="post">
+    <header class="post-hero">
+      <div class="post-hero-inner">
+        <p class="post-eyebrow"><a href="index.html">Artigos</a> · [CATEGORIA]</p>
+
+        <h1>[TÍTULO DO ARTIGO]</h1>
+
+        <p class="post-lead">
+          [DOIS OU TRÊS PERÍODOS EXPLICANDO O PROBLEMA QUE O ARTIGO RESOLVE.
+          Escreva para quem ainda não decidiu se vale a pena ler.]
+        </p>
+
+        <p class="post-data">Por Lucas Müller · [N] min de leitura</p>
+      </div>
+    </header>
+
     <div class="post-container">
-      <p class="post-meta"><a href="index.html">Artigos</a> · [CATEGORIA] · PDF</p>
-
-      <h1>[TÍTULO DO ARTIGO]</h1>
-
-      <p class="post-lead">
-        [DOIS OU TRÊS PERÍODOS EXPLICANDO O PROBLEMA QUE O ARTIGO RESOLVE.
-        Escreva para quem ainda não decidiu se vale a pena baixar.]
-      </p>
-
       <div class="post-body">
         <h2>O que você vai encontrar</h2>
         <ul>
@@ -136,13 +142,13 @@
         </p>
       </div>
 
-      <!-- Botão de download. O arquivo fica em materiais/ -->
-      <div class="post-cta">
-        <h2>Baixar o artigo completo</h2>
-        <p>PDF · [N] páginas · leitura de aproximadamente [N] minutos</p>
-        <a href="../materiais/[NOME-DO-ARQUIVO].pdf" class="btn btn-primary" download>
-          Baixar PDF
-        </a>
+      <!-- Barra de download. O arquivo fica em materiais/ -->
+      <div class="post-download">
+        <span class="post-download-txt">
+          <strong>Versão em PDF</strong>
+          <span>[N] páginas · para ler offline, imprimir ou levar ao conselho</span>
+        </span>
+        <a href="../materiais/[NOME-DO-ARQUIVO].pdf" class="btn btn-primary" download>Baixar PDF</a>
       </div>
 
       <div class="post-cta">
