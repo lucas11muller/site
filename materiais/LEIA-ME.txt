@@ -1,0 +1,50 @@
+PASTA DE MATERIAIS PARA DOWNLOAD (PDFs)
+=======================================
+
+Coloque aqui os PDFs dos seus artigos.
+
+REGRAS DE NOME DO ARQUIVO
+-------------------------
+- tudo minusculo
+- sem acento, sem espaco, sem caractere especial
+- separe palavras com hifen
+- termine com .pdf
+
+  BOM : negociacao-internacional.pdf
+  RUIM: Negociação Internacional (versão final).pdf
+
+O nome vira parte do endereco publico, entao nomes limpos
+tambem ajudam no Google.
+
+
+COMO PUBLICAR UM PDF NO SITE
+----------------------------
+Cada PDF precisa de uma pagina HTML na frente dele (a "landing page").
+E ela que aparece no Google e que leva o leitor de volta aos seus servicos.
+
+1. Coloque o PDF aqui em materiais/
+2. Duplique artigos/modelo-material.html e renomeie
+   (ex.: artigos/negociacao-internacional.html)
+3. Preencha os campos marcados com [COLCHETES] no arquivo novo
+4. TROQUE a linha robots de "noindex, nofollow" para "index, follow"
+5. Adicione o item na lista de artigos/index.html (grupo "Materiais para download")
+6. Adicione tambem em sitemap.xml
+
+
+ANTES DE SUBIR QUALQUER PDF
+---------------------------
+ATENCAO: o repositorio do site e PUBLICO.
+
+Abra cada PDF e confira se nao ha:
+  - nome de cliente ou de empresa atendida
+  - numeros, margens ou dados internos de terceiros
+  - informacao confidencial de qualquer natureza
+
+Depois de publicado, apagar o arquivo NAO desfaz: ele continua no
+historico do git e pode ja ter sido copiado ou indexado.
+
+
+TAMANHO
+-------
+Tente manter cada PDF abaixo de 2 MB. Arquivo pesado demora a abrir,
+principalmente no celular. Se passar muito disso, comprima antes.

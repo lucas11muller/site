@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+  ============================================================
+  MODELO DE PÁGINA PARA UM ARTIGO EM PDF
+  ============================================================
+  Duplique este arquivo, renomeie e preencha tudo que está
+  entre [COLCHETES]. Depois:
+
+    - troque robots de "noindex, nofollow" para "index, follow"
+    - adicione o item em artigos/index.html
+    - adicione a URL em sitemap.xml
+
+  Enquanto for modelo, ele fica fora do Google (noindex).
+  ============================================================
+-->
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[TÍTULO CURTO PARA BUSCA] | Muller Capital</title>
+  <meta name="description" content="[RESUMO DE 1 FRASE, ATÉ 155 CARACTERES. É O QUE APARECE NO GOOGLE.]" />
+  <meta name="author" content="Lucas Müller" />
+
+  <!-- TROCAR para "index, follow" quando o conteúdo estiver preenchido -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://mullercapital.net/artigos/[NOME-DO-ARQUIVO].html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://mullercapital.net/artigos/[NOME-DO-ARQUIVO].html" />
+  <meta property="og:site_name" content="Muller Capital" />
+  <meta property="og:title" content="[TÍTULO DO ARTIGO]" />
+  <meta property="og:description" content="[RESUMO DE 1 FRASE]" />
+  <meta property="og:image" content="https://mullercapital.net/assets/lucas.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#0f1f33" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%230f1f33'/%3E%3Cpath%20d='M8%2044%20L17%2029%20L26%2044%20Z'%20fill='%23c8a35a'%20opacity='.6'/%3E%3Cpath%20d='M40%2044%20L48%2031%20L56%2044%20Z'%20fill='%23c8a35a'%20opacity='.45'/%3E%3Cpath%20d='M18%2044%20L32%2020%20L46%2044%20Z'%20fill='%23c8a35a'/%3E%3Cpath%20d='M9%2047%20H55'%20stroke='%23c8a35a'%20stroke-width='3'%20stroke-linecap='round'%20opacity='.8'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "[TÍTULO DO ARTIGO]",
+    "description": "[RESUMO DE 1 FRASE]",
+    "inLanguage": "pt-BR",
+    "image": "https://mullercapital.net/assets/lucas.jpg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mullercapital.net/artigos/[NOME-DO-ARQUIVO].html"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://mullercapital.net/#lucas-muller",
+      "name": "Lucas Müller",
+      "url": "https://mullercapital.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Muller Capital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mullercapital.net/assets/muller-capital.png"
+      }
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 26" width="22" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 20 L6.5 11 L12 20 Z" fill="currentColor" opacity="0.6" />
+            <path d="M20 20 L25 12 L30 20 Z" fill="currentColor" opacity="0.45" />
+            <path d="M7 20 L16 4.5 L25 20 Z" fill="currentColor" />
+            <path d="M1.5 21.6 H30.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.8" />
+          </svg>
+        </span>
+        <span class="brand-name">Muller&nbsp;Capital</span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html#sobre">Sobre</a></li>
+          <li><a href="../index.html#metodo">Método</a></li>
+          <li><a href="../index.html#ia">IA</a></li>
+          <li><a href="../index.html#servicos">Serviços</a></li>
+          <li><a href="index.html">Artigos</a></li>
+          <li><a href="../index.html#contato" class="nav-cta">Fale comigo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== PÁGINA DO MATERIAL ===================== -->
+  <article class="post">
+    <div class="post-container">
+      <p class="post-meta"><a href="index.html">Artigos</a> · [CATEGORIA] · PDF</p>
+
+      <h1>[TÍTULO DO ARTIGO]</h1>
+
+      <p class="post-lead">
+        [DOIS OU TRÊS PERÍODOS EXPLICANDO O PROBLEMA QUE O ARTIGO RESOLVE.
+        Escreva para quem ainda não decidiu se vale a pena baixar.]
+      </p>
+
+      <div class="post-body">
+        <h2>O que você vai encontrar</h2>
+        <ul>
+          <li>[Ponto principal 1]</li>
+          <li>[Ponto principal 2]</li>
+          <li>[Ponto principal 3]</li>
+          <li>[Ponto principal 4]</li>
+        </ul>
+
+        <h2>Para quem é</h2>
+        <p>
+          [Uma frase dizendo o perfil: diretoria, time comercial, compras,
+          conselho... Ajuda o leitor certo a se reconhecer.]
+        </p>
+
+        <h2>Por que escrevi</h2>
+        <p>
+          [Dois ou três períodos de contexto — de onde veio esse material,
+          que problema real ele resolveu. É aqui que sua experiência aparece
+          e onde o Google encontra texto de verdade para indexar.]
+        </p>
+      </div>
+
+      <!-- Botão de download. O arquivo fica em materiais/ -->
+      <div class="post-cta">
+        <h2>Baixar o artigo completo</h2>
+        <p>PDF · [N] páginas · leitura de aproximadamente [N] minutos</p>
+        <a href="../materiais/[NOME-DO-ARQUIVO].pdf" class="btn btn-primary" download>
+          Baixar PDF
+        </a>
+      </div>
+
+      <div class="post-cta">
+        <h2>Quer aplicar isso na sua empresa?</h2>
+        <p>
+          Conduzo palestras, treinamentos in-company e projetos de consultoria
+          sobre este e outros temas.
+        </p>
+        <a href="../index.html#contato" class="btn btn-primary">Falar comigo</a>
+      </div>
+
+      <p class="post-nav"><a href="index.html">&larr; Todos os artigos</a></p>
+    </div>
+  </article>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-realizacao">
+        <img src="../assets/muller-capital.png" alt="Muller Capital" class="footer-logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'footer-brand',textContent:'Muller Capital'}))" />
+      </div>
+      <span class="footer-copy">© <span id="year"></span> Muller Capital Ltda. Todos os direitos reservados.</span>
+      <a href="#top" class="footer-top">Voltar ao topo &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

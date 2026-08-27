@@ -24,6 +24,8 @@ try {
     $path = [System.Uri]::UnescapeDataString($ctx.Request.Url.AbsolutePath).TrimStart("/")
     if ([string]::IsNullOrEmpty($path)) { $path = "index.html" }
     $file = Join-Path $root $path
+    # Pasta (ex.: /artigos/) -> serve o index.html dela, como faz o GitHub Pages
+    if (Test-Path $file -PathType Container) { $file = Join-Path $file "index.html" }
     if (Test-Path $file -PathType Leaf) {
       $ext = [System.IO.Path]::GetExtension($file).ToLower()
       $ctype = $mime[$ext]; if (-not $ctype) { $ctype = "application/octet-stream" }

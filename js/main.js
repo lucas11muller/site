@@ -2,8 +2,9 @@
    Lucas Müller — interações do site
    ========================================================= */
 
-// Ano atual no rodapé
-document.getElementById("year").textContent = new Date().getFullYear();
+// Ano atual no rodapé (o elemento não existe em todas as páginas)
+const anoEl = document.getElementById("year");
+if (anoEl) anoEl.textContent = new Date().getFullYear();
 
 // Menu mobile
 const toggle = document.querySelector(".nav-toggle");

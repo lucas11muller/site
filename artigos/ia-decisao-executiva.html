@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IA para C-Level e Conselho: onde ela muda o P&amp;L | Muller Capital</title>
+  <meta name="description" content="Quase toda empresa testou IA; poucas apontam a linha do resultado que mudou. As quatro camadas em que a IA muda a decisão de quem dirige a empresa." />
+  <meta name="author" content="Lucas Müller" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mullercapital.net/artigos/ia-decisao-executiva.html" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://mullercapital.net/artigos/ia-decisao-executiva.html" />
+  <meta property="og:site_name" content="Muller Capital" />
+  <meta property="og:title" content="Sua empresa adotou IA. O P&amp;L não percebeu." />
+  <meta property="og:description" content="As quatro camadas em que a IA muda de fato a decisão de quem dirige a empresa — para C-level e conselho." />
+  <meta property="og:image" content="https://mullercapital.net/assets/lucas.jpg" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="theme-color" content="#0f1f33" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Crect%20width='64'%20height='64'%20rx='12'%20fill='%230f1f33'/%3E%3Cpath%20d='M8%2044%20L17%2029%20L26%2044%20Z'%20fill='%23c8a35a'%20opacity='.6'/%3E%3Cpath%20d='M40%2044%20L48%2031%20L56%2044%20Z'%20fill='%23c8a35a'%20opacity='.45'/%3E%3Cpath%20d='M18%2044%20L32%2020%20L46%2044%20Z'%20fill='%23c8a35a'/%3E%3Cpath%20d='M9%2047%20H55'%20stroke='%23c8a35a'%20stroke-width='3'%20stroke-linecap='round'%20opacity='.8'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Sua empresa adotou IA. O P&L não percebeu.",
+    "description": "As quatro camadas em que a IA muda de fato a decisão de quem dirige a empresa: suporte à decisão, conferência de números, organização de dados e gestão visual dos indicadores.",
+    "inLanguage": "pt-BR",
+    "image": "https://mullercapital.net/assets/lucas.jpg",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mullercapital.net/artigos/ia-decisao-executiva.html"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://mullercapital.net/#lucas-muller",
+      "name": "Lucas Müller",
+      "url": "https://mullercapital.net/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Muller Capital",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://mullercapital.net/assets/muller-capital.png"
+      }
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://mullercapital.net/" },
+      { "@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://mullercapital.net/artigos/" },
+      { "@type": "ListItem", "position": 3, "name": "IA e decisão executiva" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a href="../index.html" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 26" width="22" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 20 L6.5 11 L12 20 Z" fill="currentColor" opacity="0.6" />
+            <path d="M20 20 L25 12 L30 20 Z" fill="currentColor" opacity="0.45" />
+            <path d="M7 20 L16 4.5 L25 20 Z" fill="currentColor" />
+            <path d="M1.5 21.6 H30.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity="0.8" />
+          </svg>
+        </span>
+        <span class="brand-name">Muller&nbsp;Capital</span>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="../index.html#sobre">Sobre</a></li>
+          <li><a href="../index.html#metodo">Método</a></li>
+          <li><a href="../index.html#ia">IA</a></li>
+          <li><a href="../index.html#servicos">Serviços</a></li>
+          <li><a href="index.html">Artigos</a></li>
+          <li><a href="../index.html#contato" class="nav-cta">Fale comigo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== ARTIGO ===================== -->
+  <article class="post">
+    <div class="post-container">
+      <p class="post-meta"><a href="index.html">Artigos</a> · IA &amp; Decisão Executiva · Para C-level e conselho</p>
+
+      <h1>Sua empresa adotou IA.<br />O P&amp;L não percebeu.</h1>
+
+      <p class="post-lead">
+        Quase toda empresa de porte já testou inteligência artificial. Quase nenhuma consegue
+        apontar a linha do resultado que mudou por causa disso. O problema não é a tecnologia —
+        é onde ela foi colocada.
+      </p>
+
+      <div class="post-body">
+        <h2>Adoção não é uso. Uso não é vantagem.</h2>
+
+        <p>
+          Pergunte ao seu time de TI quantas licenças de IA a empresa contratou. Você vai receber
+          um número preciso. Agora pergunte à sua diretoria qual decisão dos últimos seis meses foi
+          tomada de forma diferente por causa dessas licenças. <strong>O silêncio na segunda
+          pergunta é o diagnóstico completo.</strong>
+        </p>
+
+        <p>
+          A maior parte das empresas comprou acesso a uma ferramenta e chamou isso de estratégia
+          de IA. O resultado é previsível: um ganho difuso de produtividade individual que nunca
+          chega ao demonstrativo. Produtividade que não é convertida em capacidade realocada ou em
+          decisão melhor simplesmente evapora — é sentida pelo time e invisível para o acionista.
+        </p>
+
+        <blockquote class="post-quote">
+          IA barata deixou de ser diferencial no instante em que virou commodity. O diferencial
+          voltou a ser o de sempre: a qualidade da pergunta e a disciplina da verificação.
+        </blockquote>
+
+        <h2>Três padrões de falha</h2>
+
+        <ul>
+          <li><strong>O piloto eterno.</strong> Projeto de inovação que roda em paralelo à operação, sem dono no P&amp;L. Prova conceito com elegância e nunca prova resultado.</li>
+          <li><strong>A ferramenta sem dono.</strong> Licença distribuída para todos e responsabilidade de ninguém. Cada área inventa seu padrão e ninguém audita a saída.</li>
+          <li><strong>O ganho que não aparece.</strong> Duas horas economizadas por analista por semana são reais — e invisíveis, se ninguém decidir para onde vão.</li>
+        </ul>
+
+        <p>
+          Todos têm a mesma raiz: a IA foi tratada como ferramenta de base, não como
+          <strong>infraestrutura de decisão</strong>. O enquadramento correto é desconfortável
+          porque tira o tema de TI e o coloca na mesa da diretoria.
+        </p>
+
+        <h2>As quatro camadas onde a IA muda o resultado</h2>
+
+        <h3>01 · Suporte à decisão: do palpite ao cenário</h3>
+        <p>
+          Decisão executiva raramente falha por falta de informação. Falha por falta de tempo para
+          estruturar a informação que já existe. Entre a reunião de segunda e o comitê de quinta não
+          cabe a análise de sensibilidade que a decisão merecia — então decide-se com a base que
+          estava pronta, não com a base que era necessária.
+        </p>
+        <p>
+          A IA não decide. Ela derruba o custo de <em>montar a alternativa</em>: o cenário
+          pessimista que ninguém teve tempo de calcular, o benchmark que ficou para depois, o
+          contraditório que nenhum diretor quis fazer contra o projeto do colega. É um advogado do
+          diabo que não tem carreira a proteger nem chefe a agradar.
+        </p>
+        <p>
+          A pergunta certa nunca é "o que a IA acha?". É: <strong>o que muda na decisão se minha
+          premissa central estiver errada em 10%?</strong> Quando esse trabalho passa a caber no
+          intervalo entre duas reuniões, muda a natureza da decisão — não a velocidade dela.
+        </p>
+
+        <h3>02 · Conferência de números: o segundo par de olhos que não cansa</h3>
+        <p>
+          Todo executivo já assinou um número que não conferiu linha a linha. Não por descuido — por
+          aritmética de agenda. E a exposição real quase nunca está na conta grande e visível: está
+          na planilha herdada de alguém que saiu da empresa, na premissa de câmbio que ninguém
+          atualizou desde o último ciclo, na fórmula que parou de somar a última linha quando alguém
+          inseriu uma coluna no meio.
+        </p>
+        <p>
+          A IA é boa exatamente naquilo em que o humano cansado é ruim: verificação repetitiva,
+          cruzamento de fontes, checagem de consistência interna, identificação do número que não
+          fecha entre duas versões do mesmo relatório. Ela não substitui o controller — devolve a
+          ele o tempo que gastava procurando o erro, para gastar explicando o desvio.
+        </p>
+
+        <blockquote class="post-quote">
+          A IA confere, não assina. A verificação é dela; a responsabilidade continua inteira de
+          quem leva o número ao conselho.
+        </blockquote>
+
+        <h3>03 · Organização de dados: o trabalho invisível que decide tudo</h3>
+        <p>
+          Nenhuma empresa sofre de falta de dado. Sofre de dado que não conversa. O ERP fala uma
+          língua, a planilha do comercial fala outra, o relatório do fornecedor chega em PDF, o
+          histórico que importa está no e-mail de alguém e a versão final tem sufixo
+          "_v7_ok_final".
+        </p>
+        <p>
+          Historicamente, normalizar isso custava semanas de analista. Por ser caro, não era feito.
+          Por não ser feito, a decisão era tomada no achismo com verniz de planilha. Esse custo caiu
+          de forma brutal — e essa é a mudança mais subestimada da lista, porque é ela que destrava
+          as outras três: sem dado organizado não há conferência confiável, não há cenário e não há
+          painel.
+        </p>
+        <p>
+          Não comece por um projeto de dados. Comece pelo que já dói: <strong>os três relatórios que
+          sua diretoria consome toda semana e que hoje alguém monta à mão.</strong>
+        </p>
+
+        <h3>04 · Gestão visual: o indicador que ninguém precisa pedir</h3>
+        <p>
+          Painel não é relatório bonito. Painel é redução de latência entre o que acontece e o que
+          se decide. Se um indicador só existe quando alguém pede, ele já chegou tarde — e a empresa
+          está pagando para olhar pelo retrovisor.
+        </p>
+        <p>Três testes para o painel da sua empresa, nesta ordem:</p>
+        <ol>
+          <li><strong>O indicador tem dono?</strong> Nome, não área.</li>
+          <li><strong>Tem faixa de normalidade definida antes?</strong> O que é verde e o que é vermelho precisa estar decidido antes do número aparecer — caso contrário, o desvio vira debate sobre a régua, não sobre a causa.</li>
+          <li><strong>Alguém age quando ele vira?</strong> Painel sobre o qual ninguém age é decoração cara.</li>
+        </ol>
+        <p>
+          A IA entra aqui montando a <em>leitura</em>, não apenas o gráfico: o que variou, a causa
+          provável, o que mudou desde o ciclo anterior e qual decisão está em aberto. O gráfico
+          informa; a leitura é o que gera ação.
+        </p>
+
+        <h2>A linha que o executivo não deve cruzar</h2>
+
+        <h3>Delegue à IA</h3>
+        <ul>
+          <li>Varredura de grandes volumes de texto e dado</li>
+          <li>Primeira versão de análise e de cenário</li>
+          <li>Conferência, cruzamento e consistência</li>
+          <li>Padronização e organização de bases</li>
+          <li>Leitura de contratos e relatórios longos</li>
+          <li>Preparação de negociação e should-cost</li>
+        </ul>
+
+        <h3>Nunca delegue</h3>
+        <ul>
+          <li>A escolha entre alternativas</li>
+          <li>A premissa central do negócio</li>
+          <li>A leitura política e de relação</li>
+          <li>A aceitação de risco</li>
+          <li>Decisão com dado que você não pode auditar</li>
+          <li>Qualquer número que leve a sua assinatura</li>
+        </ul>
+
+        <h2>O teste do conselho: cinco perguntas</h2>
+
+        <p>
+          Leve estas cinco perguntas à próxima reunião. Elas separam, em minutos, a empresa que
+          comprou ferramenta da empresa que mudou processo de decisão.
+        </p>
+
+        <ol>
+          <li><strong>Qual decisão dos últimos 90 dias foi tomada de forma diferente por causa de IA?</strong> Se não houver exemplo, ainda estamos na fase de ferramenta.</li>
+          <li><strong>Quem é o dono?</strong> Nome e cargo, não "a área de tecnologia".</li>
+          <li><strong>Qual é a régua de verificação?</strong> Como sabemos que a saída está correta <em>antes</em> de ela virar decisão.</li>
+          <li><strong>O que a IA não decide aqui — está escrito?</strong> Política publicada, não entendimento tácito.</li>
+          <li><strong>O tempo ganho foi realocado para quê?</strong> Se não foi realocado, não houve ganho.</li>
+        </ol>
+
+        <h2>O risco que importa</h2>
+
+        <p>
+          O risco relevante não é a IA errar. Ela vai errar, e erro verificável é administrável — é
+          para isso que existe régua. O risco relevante é o executivo <strong>terceirizar o
+          julgamento</strong>: aceitar como resposta o que deveria ter tratado como rascunho, e
+          assinar embaixo.
+        </p>
+
+        <p>
+          Do outro lado da mesma moeda está a assimetria que poucos conselhos precificaram. Nas
+          empresas que trataram IA como infraestrutura de decisão, o ciclo entre pergunta e decisão
+          encurtou de semanas para dias. Quem decide em dias contra um concorrente que decide em
+          semanas não é apenas mais rápido: chega ao mercado com mais tentativas, mais correções e
+          mais aprendizado acumulado no mesmo trimestre. Essa vantagem não vem da ferramenta — vem
+          de ter colocado a ferramenta no lugar certo, e de ter mantido, no lugar certo, o executivo.
+        </p>
+
+        <h2>Roteiro de 90 dias</h2>
+
+        <p>
+          Nada aqui exige orçamento de transformação digital, comitê novo ou consultoria de doze
+          meses. Exige escolher <strong>uma</strong> decisão que importa e tratá-la com o mesmo
+          rigor que se trata um investimento.
+        </p>
+
+        <h3>0–30 dias · Escolher o alvo</h3>
+        <ul>
+          <li>Mapear as três decisões recorrentes de maior impacto financeiro — não as mais frequentes, as mais caras</li>
+          <li>Escolher uma. Nomear o dono. Definir a métrica que precisa mudar</li>
+          <li>Escrever, em uma página, o que a IA não decide nesta empresa</li>
+        </ul>
+        <p><em>Entregável: uma decisão escolhida, um dono, uma métrica.</em></p>
+
+        <h3>30–60 dias · Organizar o dado e construir a régua</h3>
+        <ul>
+          <li>Padronizar as fontes que alimentam essa decisão — só elas, não a empresa inteira</li>
+          <li>Definir a régua de verificação: o que é conferido, por quem, antes de virar decisão</li>
+          <li>Rodar em paralelo ao processo atual: a IA propõe, o time compara, o desvio é registrado</li>
+        </ul>
+        <p><em>Entregável: base organizada e critério de aceite documentado.</em></p>
+
+        <h3>60–90 dias · Levar ao comitê</h3>
+        <ul>
+          <li>Substituir o processo antigo onde a comparação mostrou ganho; manter onde não mostrou</li>
+          <li>Medir três coisas: tempo de ciclo da decisão, erros detectados antes da assinatura, horas realocadas</li>
+          <li>Levar o resultado ao conselho com número, não com narrativa</li>
+        </ul>
+        <p><em>Entregável: uma decisão tomada de outro jeito — e o número que prova.</em></p>
+
+        <blockquote class="post-quote">
+          Noventa dias são suficientes para provar ou descartar.
+          Três anos de piloto não são.
+        </blockquote>
+      </div>
+
+      <div class="post-cta">
+        <h2>Versão em PDF</h2>
+        <p>A edição diagramada, para ler offline, imprimir ou compartilhar com o conselho.</p>
+        <a href="../materiais/ia-decisao-executiva.pdf" class="btn btn-primary" download>Baixar PDF · 5 páginas</a>
+      </div>
+
+      <div class="post-cta">
+        <h2>Quer aplicar isso na sua empresa?</h2>
+        <p>
+          Conduzo palestras, sessões fechadas para diretoria e conselho, treinamentos in-company e
+          projetos de consultoria sobre uso executivo de IA e decisão baseada em dados.
+        </p>
+        <a href="../index.html#contato" class="btn btn-primary">Falar comigo</a>
+      </div>
+
+      <p class="post-nav"><a href="index.html">&larr; Todos os artigos</a></p>
+    </div>
+  </article>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <div class="footer-realizacao">
+        <img src="../assets/muller-capital.png" alt="Muller Capital" class="footer-logo" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'footer-brand',textContent:'Muller Capital'}))" />
+      </div>
+      <span class="footer-copy">© <span id="year"></span> Muller Capital Ltda. Todos os direitos reservados.</span>
+      <a href="#top" class="footer-top">Voltar ao topo &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

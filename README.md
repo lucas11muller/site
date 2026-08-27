@@ -252,6 +252,92 @@ Se trocar alguma foto por uma muito grande (> 1 MB), reduza antes — o site fic
 
 Se um arquivo faltar, o site continua funcionando (no topo aparece um marcador "LM").
 
+### Artigos
+
+Os artigos ficam em `artigos/`. Cada um é um arquivo HTML independente.
+
+```
+artigos/
+├── index.html                    # lista de todos os artigos
+└── preparacao-negociacao.html    # um artigo
+```
+
+**Para publicar um artigo novo:**
+
+1. Duplique `artigos/preparacao-negociacao.html` e renomeie
+   (use nome curto, minúsculo, com hífens — vira o endereço da página)
+2. No `<head>`, troque `title`, `description`, `canonical` e as tags `og:`
+3. Troque o `<h1>`, o `<p class="post-lead">` e o conteúdo de `<div class="post-body">`
+4. Adicione um bloco `<li class="artigo-item">` em `artigos/index.html`
+5. Copie o mesmo bloco para a seção **Artigos** da `index.html` (home)
+6. Adicione uma entrada em `sitemap.xml`
+
+**Estilos disponíveis dentro de `.post-body`:** `<h2>`, `<h3>`, `<p>`, `<ul>` (vira lista com ✓),
+`<ol>` (vira lista numerada 01, 02, 03), `<blockquote class="post-quote">` e `<strong>`.
+
+#### Artigos em PDF
+
+Um PDF sozinho posiciona mal no Google: não tem título de verdade, é ruim no celular
+e não tem botão levando aos seus serviços. Por isso **cada PDF ganha uma página HTML na
+frente dele** — é essa página que aparece na busca; o PDF fica como download.
+
+```
+materiais/negociacao-internacional.pdf   ← o arquivo
+artigos/negociacao-internacional.html    ← a página que o Google indexa
+```
+
+**Passo a passo:**
+
+1. Coloque o PDF em `materiais/` (nome minúsculo, sem acento, com hífens)
+2. Duplique `artigos/modelo-material.html` e renomeie
+3. Preencha tudo que está entre `[COLCHETES]`
+4. **Troque `robots` de `noindex, nofollow` para `index, follow`** — sem isso a página
+   não entra no Google
+5. Descomente o grupo "Materiais para download" em `artigos/index.html` e adicione o item
+6. Adicione a URL da **página HTML** (não a do PDF) em `sitemap.xml`
+
+> ⚠️ **Confira cada PDF antes de subir.** O repositório é público. Nome de cliente,
+> margem, dado interno de terceiro — nada disso pode ir. Depois de publicado, apagar
+> não desfaz: o arquivo continua no histórico do Git.
+
+#### Artigos do LinkedIn
+
+O grupo "Publicado no LinkedIn" existe comentado em `artigos/index.html`.
+
+Vale saber o custo: todo o ganho de busca de um artigo no LinkedIn fica com o
+**linkedin.com**, não com o seu domínio — e o link tira o visitante do seu site.
+Se o texto é seu, republicá-lo aqui como artigo HTML rende muito mais.
+Use o grupo do LinkedIn como prova social, não como biblioteca principal.
+
+> **Sem datas de propósito.** Um artigo com data de um ano atrás parece abandonado.
+> Sem data, o conteúdo continua atual enquanto for útil.
+
+### Material gratuito com captura de e-mail
+
+> ### ⚠️ NÃO COLOQUE O ARQUIVO NESTE REPOSITÓRIO
+> O repositório é **público** (exigência do GitHub Pages gratuito). Qualquer PDF aqui
+> fica acessível por link direto — em `mullercapital.net/...` e no próprio github.com —
+> e o Google indexa o arquivo. Um formulário em JavaScript na frente dele **não protege nada**:
+> basta ver o código-fonte da página.
+
+Para ter captura de e-mail de verdade, o arquivo precisa ficar numa plataforma de e-mail,
+que só envia depois do cadastro:
+
+1. Crie conta grátis em **Brevo** (<https://brevo.com>) ou **MailerLite** — o plano gratuito
+   do Brevo cobre contatos ilimitados e 300 e-mails/dia.
+2. Suba o PDF lá e monte um formulário de cadastro.
+3. Configure o e-mail automático que entrega o arquivo.
+4. Substitua o botão do bloco `.post-cta` em `artigos/index.html` pelo formulário
+   (ou por um link para a landing page da plataforma).
+
+**Não use o Formspree para isso:** são só 50 mensagens/mês, compartilhadas com o formulário
+de contato, e ele não entrega arquivos nem gerencia lista/descadastro.
+
+**LGPD:** ao coletar e-mails você vira controlador de dados. É preciso ter política de
+privacidade, caixa de consentimento (não pré-marcada), finalidade declarada e forma de
+excluir os dados a pedido. As plataformas acima já cuidam de consentimento e descadastro,
+mas a página de política de privacidade é sua responsabilidade.
+
 ### Formulário de contato
 
 O formulário envia via **Formspree**: a mensagem chega direto em
