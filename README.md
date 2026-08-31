@@ -10,17 +10,45 @@ em planejamento estratégico**.
 
 ```
 site/
-├── index.html                  # A PÁGINA. É esta que vai ao ar.
+├── index.html                  # A HOME. É esta que vai ao ar.
+├── ia.html                     # página de serviço: IA aplicada a negócios
+├── artigos/                    # lista de artigos + um HTML por artigo
+├── materiais/                  # PDFs para download
 ├── css/styles.css              # estilo (paleta navy/grafite + dourado)
 ├── js/main.js                  # menu, formulário, gráfico, lightbox
 ├── assets/                     # fotos e logo
 ├── CNAME                       # domínio personalizado (GitHub Pages lê este arquivo)
 ├── robots.txt                  # libera indexação + aponta o sitemap
-├── sitemap.xml                 # ajuda o Google a achar a página
+├── sitemap.xml                 # ajuda o Google a achar as páginas
 ├── .nojekyll                   # GitHub serve os arquivos como estão
 ├── serve.ps1                   # servidor local para testar
 └── lucas-muller-publico.html   # CÓPIA de arquivo único (para enviar por e-mail/WhatsApp)
 ```
+
+### Estrutura da home
+
+A home segue esta ordem, e cada bloco tem um comentário `<!-- ===== NOME ===== -->`
+no `index.html` para você achar rápido:
+
+| Seção | O que é |
+|-------|---------|
+| Hero | Foto, frase de abertura e os três números de topo |
+| Logos | Faixa animada de empresas |
+| Sobre | Trajetória |
+| **Gestão** | O gancho: sintomas de empresa sem sistema de gestão |
+| **Método BRIO** | Duas vertentes lado a lado — no líder / na empresa |
+| Serviços | Faixa do **Diagnóstico de Gestão** + os 4 cards |
+| Faixa IA/Artigos | Dois quadros levando para `ia.html` e `/artigos/` |
+| Resultados | Banner R$ 750 mil → R$ 40 mi + gráfico |
+| Em ação | Galeria de fotos + podcast |
+| Formação | Credenciais em duas colunas |
+| Contato | Formulário Formspree |
+
+> **Ao mexer no CSS, mude o `?v=` .** Os HTML carregam `css/styles.css?v=5`.
+> Se você editar o CSS e não subir esse número (para `?v=6` etc.), quem já visitou
+> o site continua vendo o estilo antigo guardado no navegador — e a página quebra.
+> O número precisa ser trocado em **todos** os HTML: `index.html`, `ia.html`
+> e os arquivos de `artigos/`.
 
 **Importante:** `lucas-muller-publico.html` é uma cópia idêntica do site em um único arquivo
 (CSS e JS embutidos). Serve para anexar em e-mail ou abrir sem internet. **Não é o arquivo
@@ -269,8 +297,11 @@ artigos/
 2. No `<head>`, troque `title`, `description`, `canonical` e as tags `og:`
 3. Troque o `<h1>`, o `<p class="post-lead">` e o conteúdo de `<div class="post-body">`
 4. Adicione um bloco `<li class="artigo-item">` em `artigos/index.html`
-5. Copie o mesmo bloco para a seção **Artigos** da `index.html` (home)
-6. Adicione uma entrada em `sitemap.xml`
+5. Adicione uma entrada em `sitemap.xml`
+
+> A home **não lista mais os artigos**. Ela leva para `/artigos/` pelo menu e pelo
+> quadro "Artigos & materiais" na faixa depois dos Serviços. Não é preciso copiar
+> nada para o `index.html` — publicar em `artigos/index.html` já basta.
 
 **Estilos disponíveis dentro de `.post-body`:** `<h2>`, `<h3>`, `<p>`, `<ul>` (vira lista com ✓),
 `<ol>` (vira lista numerada 01, 02, 03), `<blockquote class="post-quote">` e `<strong>`.
@@ -375,6 +406,32 @@ O Formspree também reconhece esse nome de campo nativamente. **Não remova esse
 Está tudo em `index.html`, em português e fácil de localizar pelos comentários
 (`<!-- ===== SERVIÇOS ===== -->`, etc.).
 
+#### Diagnóstico de Gestão
+
+É a porta de entrada comercial: faixa navy no topo da seção Serviços, com preço na tela.
+Fica em `index.html`, no bloco `<div class="diagnostico" id="diagnostico">`.
+
+- **Preço:** `R$ 43.900` — dentro de `<span class="diag-price">`
+- **Reembolso:** a linha em dourado (`class="diag-meta-hi"`) diz que 100% do valor é
+  reembolsável caso vire Projeto. É o argumento que transforma o valor em antecipação
+  em vez de despesa — se mudar a política comercial, mude esta linha junto.
+- Para tirar o preço da tela, troque o conteúdo de `.diag-price` por `Sob consulta`
+  e apague o `<span class="diag-price-unit">`.
+
+#### Método BRIO — duas vertentes
+
+O BRIO aparece em duas colunas com uma espinha de letras no meio: à esquerda a leitura
+original (mentoria de líder: Brilhante, Resiliente, Inovador, Obsessivo), à direita a
+aplicação na empresa (**B**ase, **R**esultado, **I**nstrumentos, **O**peração).
+
+Cada linha é um `<div class="brio-row">` com três filhos: a letra, o lado esquerdo e o
+lado direito. No celular as colunas empilham e a etiqueta "No líder" / "Na empresa"
+aparece em cada lado — é o `.brio-side-tag`, que fica escondido no desktop.
+
+> Se mexer na altura do círculo da letra (hoje 64px) ou no `padding` da linha (26px),
+> ajuste também `.brio-row::before/::after` no CSS — são os dois segmentos da linha
+> vertical, cortados exatamente em volta do círculo.
+
 ---
 
 ## Como regerar a cópia de arquivo único
@@ -388,10 +445,20 @@ $utf8 = New-Object System.Text.UTF8Encoding($false)
 $html = [System.IO.File]::ReadAllText("$root\index.html", [System.Text.Encoding]::UTF8)
 $css  = [System.IO.File]::ReadAllText("$root\css\styles.css", [System.Text.Encoding]::UTF8)
 $js   = [System.IO.File]::ReadAllText("$root\js\main.js", [System.Text.Encoding]::UTF8)
-$html = $html.Replace('<link rel="stylesheet" href="css/styles.css" />', "<style>`n$css`n  </style>")
+$antes = $html.Length
+$html = $html.Replace('<link rel="stylesheet" href="css/styles.css?v=5" />', "<style>`n$css`n  </style>")
 $html = $html.Replace('<script src="js/main.js"></script>', "<script>`n$js`n  </script>")
-[System.IO.File]::WriteAllText("$root\lucas-muller-publico.html", $html, $utf8)
+if ($html.Length -le $antes) { "ERRO: nada foi substituido - confira o ?v= do link do CSS" }
+else { [System.IO.File]::WriteAllText("$root\lucas-muller-publico.html", $html, $utf8); "OK" }
 ```
+
+> ⚠️ O `?v=` está escrito dentro do script. Se você subir o número do cache-buster
+> no `index.html` (de `?v=5` para `?v=6`), **troque também aqui** — senão o script
+> não acha o link, não embute o CSS e a cópia sai sem estilo. A linha do `if` acima
+> avisa quando isso acontece.
+
+A cópia de arquivo único é da **home apenas**. A página `ia.html` e os artigos não
+entram nela — ela existe para anexar em e-mail, não para levar o site inteiro.
 
 ---
 

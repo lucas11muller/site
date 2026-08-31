@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Palestras e Consultoria em Planejamento Estratégico | Muller Capital</title>
-  <meta name="description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança — com Lucas Müller, executivo com +15 anos em mercados globais." />
+  <title>Planejamento Estratégico e Sistemas de Gestão | Muller Capital</title>
+  <meta name="description" content="Consultoria, palestras e treinamentos em planejamento estratégico e sistemas de gestão de desempenho — com Lucas Müller, executivo com +15 anos em mercados globais." />
   <meta name="author" content="Lucas Müller" />
   <!-- Site público: indexável por buscadores -->
   <meta name="robots" content="index, follow" />
@@ -14,13 +14,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mullercapital.net/" />
   <meta property="og:site_name" content="Muller Capital" />
-  <meta property="og:title" content="Muller Capital — Planejamento Estratégico" />
-  <meta property="og:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global, com Lucas Müller." />
+  <meta property="og:title" content="Muller Capital — Planejamento Estratégico e Gestão" />
+  <meta property="og:description" content="Consultoria, palestras e treinamentos em planejamento estratégico, sistemas de gestão de desempenho e negociação global, com Lucas Müller." />
   <meta property="og:image" content="https://mullercapital.net/assets/lucas.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Muller Capital — Planejamento Estratégico" />
-  <meta name="twitter:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global, com Lucas Müller." />
+  <meta name="twitter:title" content="Muller Capital — Planejamento Estratégico e Gestão" />
+  <meta name="twitter:description" content="Consultoria, palestras e treinamentos em planejamento estratégico, sistemas de gestão de desempenho e negociação global, com Lucas Müller." />
   <meta name="twitter:image" content="https://mullercapital.net/assets/lucas.jpg" />
   <meta name="theme-color" content="#0f1f33" />
 
@@ -28,6 +28,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- ?v=5 = "cache-buster": muda o número a cada alteração no CSS,
+       senão quem já visitou o site continua vendo o estilo antigo. -->
   <style>
 /* =========================================================
    Lucas Müller — Planejamento Estratégico
@@ -395,6 +397,69 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .card-link { color: var(--gold-dark); font-weight: 600; font-size: 0.95rem; transition: gap 0.2s; }
 .card-link:hover { color: var(--navy); }
 
+/* =========================================================
+   GESTÃO DE DESEMPENHO — o gancho
+   ========================================================= */
+.gestao-head { max-width: 780px; margin: 0 auto 46px; text-align: center; }
+.gestao-head h2 {
+  font-size: clamp(1.45rem, 2.6vw, 2.05rem);
+  line-height: 1.34;
+  margin-bottom: 22px;
+}
+.gestao-head > p { color: var(--slate); font-size: 1.05rem; }
+
+.sintomas-label {
+  text-align: center;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--gold-dark);
+  margin-bottom: 22px;
+}
+.sintomas {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 26px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.sintomas li {
+  position: relative;
+  padding: 15px 20px 15px 52px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+/* caixinha vazia (não é ✓): a métrica que a empresa ainda não tem */
+.sintomas li::before {
+  content: "";
+  position: absolute;
+  left: 20px; top: 19px;
+  width: 15px; height: 15px;
+  border-radius: 4px;
+  border: 2px solid var(--gold);
+}
+/* com 7 itens, o último ocupa a linha inteira em vez de deixar buraco */
+.sintomas li:last-child:nth-child(odd) { grid-column: 1 / -1; }
+
+.sintomas-fecho {
+  max-width: 740px;
+  margin: 34px auto 0;
+  text-align: center;
+  color: var(--slate);
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+.sintomas-fecho strong { color: var(--ink); }
+.gestao-cta { text-align: center; margin-top: 26px; }
+.gestao-cta a { color: var(--gold-dark); font-weight: 600; font-size: 0.98rem; }
+.gestao-cta a:hover { color: var(--navy); }
+
 /* ===================== MÉTODO BRIO ===================== */
 .section--brio {
   background:
@@ -421,25 +486,90 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 }
 .brio-quote cite { display: block; margin-top: 14px; font-size: 0.95rem; font-style: normal; color: var(--gold); }
 
-.brio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.brio-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  padding: 28px 24px;
-  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+/* --- BRIO em duas vertentes: mesma sigla, dois objetos.
+       Esquerda = o líder (mentoria). Direita = a empresa (sistema de gestão).
+       As letras ficam numa espinha central que costura as duas colunas. --- */
+.brio-heads {
+  display: grid;
+  grid-template-columns: 1fr 96px 1fr;
+  column-gap: 28px;
+  margin-bottom: 8px;
 }
-.brio-card:hover { transform: translateY(-6px); border-color: var(--gold); background: rgba(255,255,255,0.07); }
-.brio-letter {
+.brio-head--left { text-align: right; }
+.brio-head-tag {
   display: block;
-  font-family: var(--font-display);
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 0.67rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
   color: var(--gold);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
-.brio-card h3 { color: var(--white); font-size: 1.25rem; margin-bottom: 10px; }
-.brio-card p { color: rgba(255,255,255,0.78); font-size: 0.95rem; }
+.brio-head h3 { color: var(--white); font-size: 1.28rem; margin-bottom: 8px; }
+.brio-head p { color: rgba(255, 255, 255, 0.66); font-size: 0.92rem; line-height: 1.6; }
+
+.brio-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 96px 1fr;
+  column-gap: 28px;
+  align-items: start;   /* alinhamento superior: Brilhante e Base começam na mesma linha */
+  padding: 26px 0;
+}
+/* Espinha vertical, cortada em volta do círculo. Com alinhamento no topo,
+   o círculo (64px) começa em padding-top (26px) e termina em 90px. */
+.brio-row::before,
+.brio-row::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  background: rgba(255, 255, 255, 0.16);
+}
+.brio-row::before { top: 0; height: 26px; }
+.brio-row::after { top: 90px; bottom: 0; }
+.brio-row:first-of-type::before { display: none; }
+.brio-row:last-of-type::after { display: none; }
+
+.brio-big {
+  grid-column: 2; grid-row: 1;
+  justify-self: center;
+  position: relative; z-index: 1;
+  width: 64px; height: 64px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 1.95rem;
+  line-height: 1;
+}
+/* leve respiro para o título ficar oticamente casado com o círculo */
+.brio-side { padding-top: 11px; }
+.brio-side--left  { grid-column: 1; grid-row: 1; text-align: right; }
+.brio-side--right { grid-column: 3; grid-row: 1; }
+.brio-side-tag { display: none; }   /* só aparece no celular, quando as colunas empilham */
+.brio-side h4 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1.16rem;
+  color: var(--white);
+  margin-bottom: 7px;
+}
+.brio-side p { color: rgba(255, 255, 255, 0.75); font-size: 0.94rem; line-height: 1.62; }
+.brio-out {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: rgba(200, 163, 90, 0.13);
+  border: 1px solid rgba(200, 163, 90, 0.34);
+  color: var(--gold);
+  font-size: 0.79rem;
+  font-weight: 600;
+}
 
 /* ===================== IA APLICADA ===================== */
 .ia-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start; }
@@ -468,13 +598,158 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .ia-body > p { color: var(--slate); font-size: 0.99rem; margin-bottom: 15px; }
 .ia-body .card-list { margin-bottom: 0; }
 
+/* =========================================================
+   DIAGNÓSTICO DE GESTÃO — porta de entrada (faixa larga, não card)
+   ========================================================= */
+.diagnostico {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 44px;
+  align-items: center;
+  padding: 40px 42px;
+  margin-bottom: 44px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(620px 340px at 88% -20%, rgba(200, 163, 90, 0.2), transparent 62%),
+    linear-gradient(160deg, var(--navy) 0%, var(--graphite) 100%);
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+.diag-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 13px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+.diagnostico h3 {
+  color: var(--white);
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  margin-bottom: 12px;
+}
+.diag-desc { color: rgba(255, 255, 255, 0.8); font-size: 1rem; line-height: 1.65; }
+.diag-list { list-style: none; display: grid; gap: 10px; margin-top: 20px; }
+.diag-list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.55;
+}
+.diag-list li::before {
+  content: "→";
+  position: absolute; left: 0; top: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+.diag-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  padding: 26px 26px 24px;
+  text-align: center;
+}
+.diag-price-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+.diag-price {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.35rem;
+  line-height: 1.05;
+  color: var(--white);
+}
+.diag-price-unit { display: block; font-size: 0.85rem; color: rgba(255, 255, 255, 0.62); margin-top: 4px; }
+.diag-meta {
+  list-style: none;
+  display: grid;
+  gap: 9px;
+  margin: 20px 0 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: left;
+}
+.diag-meta li { font-size: 0.87rem; color: rgba(255, 255, 255, 0.8); display: flex; gap: 10px; line-height: 1.5; }
+.diag-meta span { color: rgba(255, 255, 255, 0.5); flex: none; width: 78px; }
+/* a linha do reembolso é argumento de venda, então ganha destaque */
+.diag-meta-hi { color: var(--gold) !important; font-weight: 600; }
+.diag-meta-hi span { color: rgba(200, 163, 90, 0.65) !important; font-weight: 400; }
+
+/* =========================================================
+   FAIXA — IA e Artigos (páginas próprias)
+   ========================================================= */
+.section--slim { padding: 54px 0; }
+.explore { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+.explore-tile {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 26px 24px;
+  transition: transform 0.2s ease, box-shadow 0.22s ease, border-color 0.2s ease;
+}
+.explore-tile::before {
+  content: "";
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s ease;
+}
+.explore-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: rgba(200, 163, 90, 0.5);
+}
+.explore-tile:hover::before { transform: scaleX(1); }
+.explore-eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--gold-dark);
+  margin-bottom: 10px;
+}
+.explore-tile h3 { font-size: 1.24rem; color: var(--ink); margin-bottom: 8px; }
+.explore-tile p { color: var(--slate); font-size: 0.95rem; line-height: 1.6; margin-bottom: 16px; }
+.explore-seta { color: var(--gold-dark); font-weight: 600; font-size: 0.9rem; }
+
+/* =========================================================
+   CAPA DE PÁGINA DE SERVIÇO (ia.html)
+   ========================================================= */
+.svc-hero {
+  background:
+    radial-gradient(760px 420px at 82% -25%, rgba(200, 163, 90, 0.18), transparent 62%),
+    linear-gradient(160deg, var(--navy) 0%, var(--graphite) 100%);
+  color: var(--white);
+  padding: 68px 0 60px;
+}
+.svc-hero h1 { color: var(--white); font-size: clamp(2rem, 4.2vw, 2.9rem); margin-bottom: 20px; max-width: 20ch; }
+.svc-hero .lead { max-width: 62ch; margin-bottom: 30px; }
+.svc-back { display: inline-block; margin-bottom: 22px; color: var(--gold); font-size: 0.88rem; font-weight: 600; }
+.svc-back:hover { text-decoration: underline; }
+
 /* ===================== GRÁFICO DE CRESCIMENTO ===================== */
 .growth-chart {
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 30px 28px 22px;
-  margin: 0 0 32px;
+  margin: 0;
 }
 .growth-title { text-align: center; color: var(--slate); font-size: 1.05rem; margin-bottom: 26px; }
 .growth-title strong { color: var(--navy); font-family: var(--font-display); }
@@ -547,7 +822,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .stat-label { color: var(--slate); font-size: 0.95rem; }
 
 /* ===================== FORMAÇÃO ===================== */
-.formacao-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: start; }
+.formacao-grid { display: grid; grid-template-columns: 0.78fr 1.22fr; gap: 56px; align-items: start; }
 .formacao-langs { margin-top: 22px; color: var(--slate); font-size: 0.98rem; }
 .formacao-extra { margin-top: 28px; }
 .formacao-extra-title {
@@ -568,28 +843,36 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   color: var(--ink);
   font-weight: 500;
 }
-.formacao-list { list-style: none; display: grid; gap: 4px; }
+/* Duas colunas: a lista tem 8 itens e ocupava meia página em coluna única. */
+.formacao-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  align-content: start;
+}
 .formacao-list li {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 11px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 16px 20px;
-  margin-bottom: 10px;
+  padding: 12px 14px;
 }
 .formacao-list .flag {
   width: 30px; height: 22px;
   flex-shrink: 0;
+  margin-top: 3px;
   border-radius: 3px;
   object-fit: cover;
   box-shadow: 0 1px 3px rgba(0,0,0,0.18);
 }
 .formacao-text { min-width: 0; }
-.formacao-list strong { display: block; color: var(--ink); font-size: 1.02rem; }
-.formacao-list span { color: var(--muted); font-size: 0.92rem; }
-.formacao-honor { background: var(--navy) !important; border-color: var(--navy) !important; }
+.formacao-list strong { display: block; color: var(--ink); font-size: 0.93rem; line-height: 1.35; }
+.formacao-list span { color: var(--muted); font-size: 0.82rem; line-height: 1.45; }
+/* a honraria atravessa as duas colunas, como faixa de destaque no topo */
+.formacao-honor { grid-column: 1 / -1; background: var(--navy) !important; border-color: var(--navy) !important; }
 .formacao-honor strong { color: var(--gold) !important; }
 .formacao-honor span { color: rgba(255,255,255,0.78) !important; }
 
@@ -597,8 +880,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 240px;
-  gap: 18px;
+  grid-auto-rows: 172px;
+  gap: 14px;
 }
 .gallery-item {
   position: relative;
@@ -634,10 +917,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .gallery-item figcaption {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  padding: 28px 18px 14px;
+  padding: 22px 14px 11px;
   background: linear-gradient(transparent, rgba(15,31,51,0.92));
   color: var(--white);
-  font-size: 0.9rem;
+  font-size: 0.84rem;
   font-weight: 500;
 }
 .media-tag {
@@ -658,7 +941,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .podcast-cta {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   margin-top: 24px;
   padding: 18px;
   background: var(--white);
@@ -671,7 +954,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 .podcast-thumb {
   position: relative;
   flex-shrink: 0;
-  width: 220px;
+  width: 180px;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   overflow: hidden;
@@ -697,7 +980,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
   color: var(--gold-dark);
 }
-.podcast-info strong { font-family: var(--font-display); font-size: 1.2rem; color: var(--ink); font-weight: 500; line-height: 1.3; }
+.podcast-info strong { font-family: var(--font-display); font-size: 1.08rem; color: var(--ink); font-weight: 500; line-height: 1.3; }
 .podcast-link-text { color: var(--gold-dark); font-weight: 600; font-size: 0.95rem; }
 
 @media (max-width: 560px) {
@@ -1111,10 +1394,35 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
   .artigos-cards { grid-template-columns: repeat(2, 1fr); }
   .ia-grid { grid-template-columns: 1fr; gap: 40px; }
   .ia-intro { position: static; }
-  .brio-grid { grid-template-columns: repeat(2, 1fr); }
   .brio-quote { font-size: 1.12rem; }
   .stats { grid-template-columns: repeat(2, 1fr); }
-  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 200px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+
+  /* BRIO: as duas vertentes empilham — letra, depois líder, depois empresa */
+  .brio-heads { grid-template-columns: 1fr; gap: 18px; margin-bottom: 26px; }
+  .brio-heads > div:nth-child(2) { display: none; }
+  .brio-head--left { text-align: left; }
+  .brio-row {
+    grid-template-columns: 1fr;
+    padding: 26px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .brio-row::before, .brio-row::after { display: none; }
+  .brio-big { grid-column: 1; grid-row: auto; justify-self: start; margin-bottom: 16px; }
+  .brio-side { padding-top: 0; }
+  .brio-side--left, .brio-side--right { grid-column: 1; grid-row: auto; text-align: left; }
+  .brio-side--left { margin-bottom: 20px; }
+  .brio-side-tag {
+    display: block;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 5px;
+  }
+
+  .diagnostico { grid-template-columns: 1fr; gap: 30px; padding: 32px 26px; }
   .gallery-item--wide,
   .gallery-item--media { grid-column: span 2; }
 
@@ -1138,6 +1446,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
 
 @media (max-width: 560px) {
   .section { padding: 60px 0; }
+  .sintomas { grid-template-columns: 1fr; }
+  .sintomas li:last-child:nth-child(odd) { grid-column: auto; }
+  .explore { grid-template-columns: 1fr; }
+  .formacao-list { grid-template-columns: 1fr; }
   .artigos-cards { grid-template-columns: 1fr; }
   .post-stats { grid-template-columns: 1fr; }
   .post-hero { padding: 44px 0 40px; }
@@ -1167,7 +1479,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     "url": "https://mullercapital.net/",
     "logo": "https://mullercapital.net/assets/muller-capital.png",
     "image": "https://mullercapital.net/assets/lucas.jpg",
-    "description": "Palestras, treinamentos e consultoria em planejamento estratégico, negociação global e liderança.",
+    "description": "Consultoria, palestras e treinamentos em planejamento estratégico, sistemas de gestão de desempenho, negociação global e liderança.",
     "email": "lmuller@mullercapital.net",
     "telephone": "+55-41-98411-7807",
     "address": {
@@ -1180,6 +1492,10 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     "areaServed": { "@type": "Country", "name": "Brasil" },
     "knowsAbout": [
       "Planejamento estratégico",
+      "Gestão de desempenho",
+      "Sistema de indicadores",
+      "Indicadores de desempenho (KPIs)",
+      "Governança de execução",
       "Negociação internacional",
       "Liderança de equipes globais",
       "Procurement e gestão de fornecedores",
@@ -1225,15 +1541,16 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
           <span></span><span></span><span></span>
         </button>
+        <!-- NAV enxuta: 8 itens. "IA" e "Artigos" agora são páginas próprias.
+             "Em ação" e "Formação" saíram do menu (continuam na página, ao rolar). -->
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#gestao">Gestão</a></li>
           <li><a href="#metodo">Método</a></li>
-          <li><a href="#ia">IA</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#resultados">Resultados</a></li>
-          <li><a href="#acao">Em ação</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="ia.html">IA</a></li>
+          <li><a href="artigos/index.html">Artigos</a></li>
           <li><a href="#contato" class="nav-cta">Fale comigo</a></li>
         </ul>
       </nav>
@@ -1263,7 +1580,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         </ul>
       </div>
       <div class="hero-figure">
-        <!-- Substitua o arquivo abaixo pela sua foto (assets/lucas.jpg) -->
         <div class="portrait" role="img" aria-label="Foto de Lucas Müller">
           <img src="assets/lucas.jpg" alt="Lucas Müller" onerror="this.style.display='none';this.parentNode.classList.add('portrait--placeholder')" />
           <span class="portrait-fallback">LM</span>
@@ -1282,8 +1598,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     <div class="container">
       <p class="logos-label">Experiência construída atendendo e negociando com líderes globais</p>
     </div>
-    <!-- Faixa animada (marquee). Para usar logos reais, troque o texto de cada <li>
-         por <img src="assets/logos/nome.svg" alt="Empresa" /> nos DOIS blocos .logos-track. -->
     <div class="logos-marquee">
       <ul class="logos-track">
         <li>Nestlé</li><li>Unilever</li><li>General Mills</li><li>Mondelez</li><li>Kerry</li>
@@ -1343,7 +1657,48 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     </div>
   </section>
 
-  <!-- ===================== MÉTODO BRIO ===================== -->
+  <!-- =========================================================
+       NOVA SEÇÃO — O GANCHO: GESTÃO DE DESEMPENHO
+       ========================================================= -->
+  <section id="gestao" class="section section--alt">
+    <div class="container">
+      <div class="gestao-head">
+        <p class="section-eyebrow">Gestão de desempenho</p>
+        <h2>
+          O plano estratégico costuma estar certo. O que falta é o sistema que transforma esse plano
+          em rotina — e que mostra, antes do fechamento, se ele está funcionando.
+        </h2>
+        <p>
+          A maior parte das empresas mede alguma coisa. Poucas medem as coisas certas, e menos ainda
+          sabem dizer de onde vem cada número, quem responde por ele e o que acontece quando ele piora.
+          A dificuldade quase nunca é montar um painel — é decidir o que deveria estar dentro dele.
+        </p>
+      </div>
+
+      <p class="sintomas-label">Como isso costuma aparecer no dia a dia</p>
+      <ul class="sintomas">
+        <li>O número só aparece no fechamento — e vem do contador, não da operação.</li>
+        <li>Cada diretor chega na reunião com a própria planilha, e os números não batem.</li>
+        <li>A reunião mensal discute o que aconteceu, não o que fazer a partir daqui.</li>
+        <li>As metas estão no plano estratégico e não aparecem em nenhuma rotina semanal.</li>
+        <li>Quando o resultado cai, a conversa vira busca por culpado em vez de busca pela causa.</li>
+        <li>Ninguém sabe dizer, sem pensar, qual indicador é responsabilidade de quem.</li>
+        <li>Se o diretor tira férias, a área simplesmente deixa de ser acompanhada.</li>
+      </ul>
+
+      <p class="sintomas-fecho">
+        Se três ou mais soam familiares, o gargalo provavelmente não está no time. Está na ausência de um
+        sistema que mostre, <strong>a tempo de corrigir</strong>, se o esforço está indo para o lugar certo.
+      </p>
+      <p class="gestao-cta">
+        <a href="#diagnostico">Ver como começamos: o Diagnóstico de Gestão &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MÉTODO BRIO — AGORA EM DUAS VERTENTES
+       ========================================================= -->
   <section id="metodo" class="section section--brio">
     <div class="container">
       <div class="section-head">
@@ -1360,106 +1715,134 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <cite>— Clóvis de Barros Filho</cite>
       </blockquote>
 
-      <div class="brio-grid">
-        <article class="brio-card">
-          <span class="brio-letter">B</span>
-          <h3>Brilhante</h3>
+      <!-- Cabeçalhos das duas vertentes -->
+      <div class="brio-heads">
+        <div class="brio-head brio-head--left">
+          <span class="brio-head-tag">Vertente 1 · Mentoria</span>
+          <h3>No líder</h3>
+          <p>Sparring e mentoria para C-level, founders e conselho. O BRIO como postura de quem decide.</p>
+        </div>
+        <div aria-hidden="true"></div>
+        <div class="brio-head brio-head--right">
+          <span class="brio-head-tag">Vertente 2 · Consultoria</span>
+          <h3>Na empresa</h3>
+          <p>Instalação do sistema de gestão de desempenho. O BRIO como rotina que a operação segue.</p>
+        </div>
+      </div>
+
+      <!-- B -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">B</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Brilhante</h4>
           <p>De extrema originalidade e inventividade: soluções únicas e excelentes para seus clientes.</p>
-        </article>
-        <article class="brio-card">
-          <span class="brio-letter">R</span>
-          <h3>Resiliente</h3>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Base</h4>
+          <p>Onde a empresa está de verdade. O que já se mede, de onde vem cada número, e o que hoje é opinião circulando como dado.</p>
+          <span class="brio-out">Retrato honesto da situação atual</span>
+        </div>
+      </div>
+
+      <!-- R -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">R</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Resiliente</h4>
           <p>Flexibilidade para se adaptar a mudanças e lidar com desafios sob pressão.</p>
-        </article>
-        <article class="brio-card">
-          <span class="brio-letter">I</span>
-          <h3>Inovador</h3>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Resultado</h4>
+          <p>Onde se quer chegar e o que precisa ser verdade para chegar lá. Do resultado desejado para trás, até os poucos indicadores que cada área de fato controla.</p>
+          <span class="brio-out">Árvore de indicadores, com meta e dono</span>
+        </div>
+      </div>
+
+      <!-- I -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">I</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Inovador</h4>
           <p>Aplica novas ideias para melhorar cenários &amp; gerar resultados concretos.</p>
-        </article>
-        <article class="brio-card">
-          <span class="brio-letter">O</span>
-          <h3>Obsessivo</h3>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Instrumentos</h4>
+          <p>Como enxergar sem esperar o fechamento. Cálculo, fonte, frequência e responsável de cada indicador — e o painel onde eles vivem.</p>
+          <span class="brio-out">Painel rodando com dado real</span>
+        </div>
+      </div>
+
+      <!-- O -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">O</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Obsessivo</h4>
           <p>Necessidade intensa de realizar, com compromisso vital pela entrega.</p>
-        </article>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Operação</h4>
+          <p>Como corrigir a rota. Cadência de reuniões, quem decide o quê, e o que acontece quando um indicador fica vermelho.</p>
+          <span class="brio-out">Rotina de gestão que se sustenta sem você</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== IA APLICADA ===================== -->
-  <section id="ia" class="section">
-    <div class="container ia-grid">
-      <div class="ia-intro">
-        <p class="section-eyebrow">Inteligência Artificial</p>
-        <h2>IA aplicada ao resultado — não à demonstração.</h2>
-        <p class="ia-lead">
-          A maioria das empresas já testou IA. Poucas transformaram isso em decisão melhor,
-          custo menor ou receita maior. Meu trabalho é a ponte entre a ferramenta e o P&amp;L.
-        </p>
-        <a href="#contato" class="btn btn-primary">Conversar sobre IA na sua empresa</a>
-      </div>
-
-      <ol class="ia-list">
-        <li class="ia-item">
-          <span class="ia-num" aria-hidden="true">01</span>
-          <div class="ia-body">
-            <h3>Capacitação de times</h3>
-            <p>
-              Workshops práticos para times comerciais, de compras e de estratégia usarem IA no
-              trabalho real — não em teoria.
-            </p>
-            <ul class="card-list">
-              <li>Casos de uso por função (comercial, compras, supply)</li>
-              <li>Prompts e fluxos aplicados à rotina da equipe</li>
-              <li>Critérios de qualidade e verificação de respostas</li>
-              <li>Ganho de produtividade mensurável</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="ia-item">
-          <span class="ia-num" aria-hidden="true">02</span>
-          <div class="ia-body">
-            <h3>IA na estratégia e nas decisões</h3>
-            <p>
-              Como uso IA dentro dos meus próprios projetos de consultoria e advisory para
-              decidir mais rápido e com mais base.
-            </p>
-            <ul class="card-list">
-              <li>Inteligência de mercado e benchmarking</li>
-              <li>Análise de cenários e simulações</li>
-              <li>Should-cost, TCO e preparação de negociação</li>
-              <li>Leitura de grandes volumes de dados em horas, não semanas</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="ia-item">
-          <span class="ia-num" aria-hidden="true">03</span>
-          <div class="ia-body">
-            <h3>Uso executivo de IA — C-Level &amp; Board</h3>
-            <p>
-              Sessões fechadas para diretoria e conselho: o que a IA realmente muda no negócio,
-              sem hype e sem jargão técnico.
-            </p>
-            <ul class="card-list">
-              <li>O que muda — e o que não muda — na estratégia</li>
-              <li>Onde investir agora e onde esperar</li>
-              <li>Governança, risco e conformidade</li>
-              <li>IA no dia a dia do próprio executivo</li>
-            </ul>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+  <!-- A seção de IA fica em ia.html (página própria).
+       Na home ela reaparece resumida, na faixa depois dos Serviços. -->
 
   <!-- ===================== SERVIÇOS ===================== -->
   <section id="servicos" class="section section--alt">
     <div class="container">
       <div class="section-head">
         <p class="section-eyebrow">Serviços</p>
-        <h2>Quatro formas de trabalharmos juntos.</h2>
-        <p class="section-sub">Da inspiração à transformação — escolha o formato que sua empresa precisa.</p>
+        <h2>Por onde começar — e como seguir.</h2>
+        <p class="section-sub">Um diagnóstico curto abre o caminho. Depois, o formato que sua empresa precisa.</p>
+      </div>
+
+      <!-- =====================================================
+           FAIXA: DIAGNÓSTICO DE GESTÃO (porta de entrada)
+           =====================================================
+           ⚠️ PREÇO ABAIXO É PLACEHOLDER — inventado só para você
+           avaliar o layout. Trocar pelo valor real, ou substituir o
+           bloco .diag-price por "Sob consulta" (ver README do commit).
+      -->
+      <div class="diagnostico" id="diagnostico">
+        <div>
+          <span class="diag-tag">Porta de entrada</span>
+          <h3>Diagnóstico de Gestão</h3>
+          <p class="diag-desc">
+            Três semanas para responder a duas perguntas que a maioria das empresas não consegue responder
+            com segurança: <strong>o que precisa ser medido</strong> para chegar ao resultado que vocês
+            querem, e <strong>o que falta hoje</strong> para conseguir enxergar isso a tempo de corrigir.
+          </p>
+          <ul class="diag-list">
+            <li>Mapeamento do que já se mede — e do que circula como dado sem ser dado</li>
+            <li>Árvore de indicadores: do resultado desejado até o que cada área controla</li>
+            <li>Meta e dono definidos para cada número que importa</li>
+            <li>Plano de instalação: o que fazer, em que ordem, com que esforço</li>
+          </ul>
+        </div>
+        <div class="diag-box">
+          <span class="diag-price-label">Investimento</span>
+          <span class="diag-price">R$ 43.900</span>
+          <span class="diag-price-unit">valor fechado, sem hora extra</span>
+          <ul class="diag-meta">
+            <li><span>Prazo</span> 3 semanas</li>
+            <li><span>Formato</span> remoto ou presencial</li>
+            <li><span>Entrega</span> relatório + árvore de indicadores + plano</li>
+            <li class="diag-meta-hi"><span>Reembolso</span> 100% do valor reembolsável em caso de tornar-se Projeto</li>
+          </ul>
+          <a href="#contato" class="btn btn-primary btn-block">Começar pelo diagnóstico</a>
+        </div>
       </div>
 
       <div class="cards">
@@ -1504,32 +1887,32 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
           <a href="#contato" class="card-link">Montar um treinamento &rarr;</a>
         </article>
 
-        <!-- Consultoria -->
+        <!-- Consultoria — REESCRITA: plano + sistema de gestão (BRIO: I + O) -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">📈</div>
           <h3>Consultoria em Planejamento Estratégico</h3>
-          <p>Acompanhamento próximo para desenhar e implementar o plano estratégico da sua empresa — do diagnóstico à execução com governança.</p>
+          <p>O plano estratégico e — principalmente — o sistema que faz esse plano acontecer: indicadores, painel e a rotina que corrige a rota antes do fechamento.</p>
           <ul class="card-list">
-            <li>Diagnóstico estratégico e análise de mercado</li>
-            <li>Desenho do plano e definição de metas</li>
-            <li>Governança de execução (rituais, KPIs, cadência)</li>
-            <li>Otimização de portfólio e value engineering</li>
+            <li>Diagnóstico estratégico e desenho do plano</li>
+            <li>Árvore de indicadores: o que medir, com meta e dono por área</li>
+            <li>Painel de gestão com dado real, sem esperar o fechamento</li>
+            <li>Rituais de execução — cadência, decisão e correção de rota</li>
           </ul>
           <p class="card-aud"><span>Para:</span> conselhos, C-level e empresas em transformação.</p>
-          <p class="card-price"><span class="card-price-value card-price-value--consult">Sob consulta</span><span class="card-price-unit">projeto sob medida</span></p>
+          <p class="card-price"><span class="card-price-value card-price-value--consult">Sob consulta</span><span class="card-price-unit">projeto sob medida · a partir do diagnóstico</span></p>
           <a href="#contato" class="card-link">Iniciar um projeto &rarr;</a>
         </article>
 
-        <!-- Advisor & Operating Partner -->
+        <!-- Advisor — REESCRITA: quem roda a cadência junto -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">🤝</div>
           <h3>Advisor &amp; Operating Partner</h3>
-          <p>Apoio recorrente ao board, founders e à alta liderança — uma visão externa e experiente para decisões de crescimento, capital e estratégia de longo prazo.</p>
+          <p>Depois de instalado, o sistema precisa de alguém que o faça rodar. Conduzo a cadência de gestão junto com a liderança — e ocupo a cadeira de visão externa nas decisões de crescimento.</p>
           <ul class="card-list">
+            <li>Condução da cadência de gestão (mensal e trimestral)</li>
             <li>Assento consultivo em conselho (advisory board)</li>
-            <li>Mentoria e sparring estratégico de C-level</li>
+            <li>Mentoria e sparring estratégico de C-level e founders</li>
             <li>Apoio em crescimento, M&amp;A e expansão internacional</li>
-            <li>Governança, rede de contatos e acesso global</li>
           </ul>
           <p class="card-aud"><span>Para:</span> conselhos, founders e empresas em expansão.</p>
           <p class="card-price"><span class="card-price-value card-price-value--consult">Sob consulta</span><span class="card-price-unit">retainer mensal ou por mandato</span></p>
@@ -1539,8 +1922,37 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     </div>
   </section>
 
+  <!-- =========================================================
+       FAIXA — as duas páginas que saíram da home
+       ========================================================= -->
+  <section class="section section--slim" aria-label="Mais conteúdo">
+    <div class="container">
+      <div class="explore">
+        <a class="explore-tile" href="ia.html">
+          <span class="explore-eyebrow">Inteligência Artificial</span>
+          <h3>IA aplicada ao resultado — não à demonstração.</h3>
+          <p>
+            A maioria das empresas já testou IA. Poucas transformaram isso em decisão melhor,
+            custo menor ou receita maior. Capacitação de times, IA na estratégia e sessões
+            fechadas para C-level e conselho.
+          </p>
+          <span class="explore-seta">Ver como trabalho IA &rarr;</span>
+        </a>
+        <a class="explore-tile" href="artigos/index.html">
+          <span class="explore-eyebrow">Artigos &amp; materiais</span>
+          <h3>Conteúdo prático, do jeito que se usa na segunda-feira.</h3>
+          <p>
+            Frameworks e checklists que uso em treinamentos e projetos — negociação, cultura,
+            IA na decisão executiva. Abertos, sem cadastro.
+          </p>
+          <span class="explore-seta">Ler os artigos &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== RESULTADOS ===================== -->
-  <section id="resultados" class="section">
+  <section id="resultados" class="section section--alt">
     <div class="container">
       <div class="section-head">
         <p class="section-eyebrow">Resultados</p>
@@ -1552,7 +1964,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         <span class="result-banner-to">R$ 40 milhões em 5 anos</span>
       </div>
 
-      <figure class="growth-chart" aria-label="Gráfico de crescimento de receita: 400% em cinco anos">
+      <figure class="growth-chart growth-chart--last" aria-label="Gráfico de crescimento de receita: 400% em cinco anos">
         <figcaption class="growth-title">Crescimento de receita — <strong>+400% em 5 anos</strong></figcaption>
         <div class="growth-bars">
           <div class="growth-bar" style="--h: 20%"><span class="growth-val">1x</span></div>
@@ -1566,22 +1978,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         </div>
       </figure>
 
-      <div class="stats">
-        <div class="stat"><span class="stat-num">R$ 2,5 bi</span><span class="stat-label">em negócios negociados</span></div>
-        <div class="stat"><span class="stat-num">400%</span><span class="stat-label">de crescimento em 5 anos</span></div>
-        <div class="stat"><span class="stat-num">+500</span><span class="stat-label">profissionais treinados</span></div>
-        <div class="stat"><span class="stat-num">+20</span><span class="stat-label">mentorados</span></div>
-        <div class="stat"><span class="stat-num">+10</span><span class="stat-label">startups como advisor</span></div>
-        <div class="stat"><span class="stat-num">+2.000</span><span class="stat-label">acordos comerciais geridos</span></div>
-        <div class="stat"><span class="stat-num">27</span><span class="stat-label">profissionais liderados</span></div>
-        <div class="stat"><span class="stat-num">7,4%</span><span class="stat-label">de savings médio em categorias-chave</span></div>
-        <div class="stat"><span class="stat-num">33%</span><span class="stat-label">de redução de exposição a risco</span></div>
-      </div>
+      <!-- A grade de 9 estatísticas saiu daqui: vira material de apresentação comercial.
+           Os três números de topo (+15 anos, R$ 2,5 bi, +25 países) seguem no hero. -->
     </div>
   </section>
 
   <!-- ===================== EM AÇÃO / GALERIA ===================== -->
-  <section id="acao" class="section section--alt">
+  <section id="acao" class="section">
     <div class="container">
       <div class="section-head">
         <p class="section-eyebrow">Em ação</p>
@@ -1630,7 +2033,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     </div>
   </section>
 
-  <!-- ===================== LIGHTBOX (ampliar fotos) ===================== -->
+  <!-- ===================== LIGHTBOX ===================== -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
     <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
     <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#8249;</button>
@@ -1641,58 +2044,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
     <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Próxima">&#8250;</button>
   </div>
 
-  <!-- ===================== ARTIGOS ===================== -->
-  <section id="artigos" class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-eyebrow">Artigos</p>
-        <h2>Conteúdo prático, do jeito que se usa na segunda-feira.</h2>
-        <p class="section-sub">
-          Frameworks e checklists que uso em treinamentos e projetos — abertos, sem cadastro.
-        </p>
-      </div>
-
-      <!-- Cards dos artigos mais recentes. A lista completa fica em /artigos/ -->
-      <ul class="artigos-cards">
-        <li class="artigo-card">
-          <a class="artigo-link" href="artigos/ia-decisao-executiva.html">
-            <span class="artigo-tag">IA &amp; Decisão Executiva</span>
-            <span class="artigo-titulo">Sua empresa adotou IA. O P&amp;L não percebeu.</span>
-            <span class="artigo-resumo">
-              As quatro camadas em que a IA muda de fato a decisão de quem dirige a empresa.
-            </span>
-            <span class="artigo-seta">Ler artigo &rarr;</span>
-          </a>
-        </li>
-        <li class="artigo-card">
-          <a class="artigo-link" href="artigos/cultura-do-futuro.html">
-            <span class="artigo-tag">Liderança · Cultura</span>
-            <span class="artigo-titulo">Cultura do Futuro</span>
-            <span class="artigo-resumo">
-              Paciência estratégica, autonomia e sucessão como fundamentos de uma empresa
-              preparada para o longo prazo.
-            </span>
-            <span class="artigo-seta">Ler artigo &rarr;</span>
-          </a>
-        </li>
-        <li class="artigo-card">
-          <a class="artigo-link" href="artigos/preparacao-negociacao.html">
-            <span class="artigo-tag">Negociação</span>
-            <span class="artigo-titulo">Preparação de negociação: quem fecha e quem cede</span>
-            <span class="artigo-resumo">
-              O roteiro de preparação e os quatro números que você precisa ter na mão
-              antes da reunião.
-            </span>
-            <span class="artigo-seta">Ler artigo &rarr;</span>
-          </a>
-        </li>
-      </ul>
-
-      <p class="artigos-cta">
-        <a href="artigos/index.html" class="btn btn-primary">Ver todos os artigos</a>
-      </p>
-    </div>
-  </section>
+  <!-- A seção de Artigos saiu daqui: virou aba no menu (/artigos/)
+       e um dos dois quadros da faixa depois dos Serviços. -->
 
   <!-- ===================== FORMAÇÃO ===================== -->
   <section id="formacao" class="section section--alt">
@@ -1776,7 +2129,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         </ul>
       </div>
 
-      <!-- Formulário: envia via Formspree direto para lmuller@mullercapital.net (ver README) -->
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/xoeqajvz" method="POST">
         <div class="field">
           <label for="nome">Nome</label>
@@ -1792,7 +2144,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
         </div>
         <div class="field">
           <label for="interesse">Tenho interesse em</label>
+          <!-- NOVO: o diagnóstico entra como primeira opção -->
           <select id="interesse" name="interesse">
+            <option value="Diagnóstico de Gestão">Diagnóstico de Gestão</option>
             <option value="Palestra">Palestra / Keynote</option>
             <option value="Treinamento">Treinamento / Workshop</option>
             <option value="Consultoria">Consultoria em Planejamento Estratégico</option>
@@ -1804,9 +2158,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o evento ou desafio..." required></textarea>
         </div>
-        <!-- Assunto do e-mail que chega na sua caixa. O JS atualiza com o interesse escolhido. -->
         <input type="hidden" name="_subject" id="form-subject" value="Contato pelo site — Muller Capital" />
-        <!-- Anti-spam: campo invisível. Pessoas não preenchem; robôs sim. Não remover. -->
         <div class="field-hp" aria-hidden="true">
           <label for="_gotcha">Deixe este campo em branco</label>
           <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />

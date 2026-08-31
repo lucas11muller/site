@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Palestras e Consultoria em Planejamento Estratégico | Muller Capital</title>
-  <meta name="description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança — com Lucas Müller, executivo com +15 anos em mercados globais." />
+  <title>Planejamento Estratégico e Sistemas de Gestão | Muller Capital</title>
+  <meta name="description" content="Consultoria, palestras e treinamentos em planejamento estratégico e sistemas de gestão de desempenho — com Lucas Müller, executivo com +15 anos em mercados globais." />
   <meta name="author" content="Lucas Müller" />
   <!-- Site público: indexável por buscadores -->
   <meta name="robots" content="index, follow" />
@@ -14,13 +14,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mullercapital.net/" />
   <meta property="og:site_name" content="Muller Capital" />
-  <meta property="og:title" content="Muller Capital — Planejamento Estratégico" />
-  <meta property="og:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global, com Lucas Müller." />
+  <meta property="og:title" content="Muller Capital — Planejamento Estratégico e Gestão" />
+  <meta property="og:description" content="Consultoria, palestras e treinamentos em planejamento estratégico, sistemas de gestão de desempenho e negociação global, com Lucas Müller." />
   <meta property="og:image" content="https://mullercapital.net/assets/lucas.jpg" />
   <meta property="og:locale" content="pt_BR" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Muller Capital — Planejamento Estratégico" />
-  <meta name="twitter:description" content="Palestras, treinamentos e consultoria em planejamento estratégico, negociação e liderança global, com Lucas Müller." />
+  <meta name="twitter:title" content="Muller Capital — Planejamento Estratégico e Gestão" />
+  <meta name="twitter:description" content="Consultoria, palestras e treinamentos em planejamento estratégico, sistemas de gestão de desempenho e negociação global, com Lucas Müller." />
   <meta name="twitter:image" content="https://mullercapital.net/assets/lucas.jpg" />
   <meta name="theme-color" content="#0f1f33" />
 
@@ -28,7 +28,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <!-- ?v=5 = "cache-buster": muda o número a cada alteração no CSS,
+       senão quem já visitou o site continua vendo o estilo antigo. -->
+  <link rel="stylesheet" href="css/styles.css?v=5" />
 
   <!-- Dados estruturados: ajuda o Google a entender quem é a empresa e quem é o profissional -->
   <script type="application/ld+json">
@@ -41,7 +43,7 @@
     "url": "https://mullercapital.net/",
     "logo": "https://mullercapital.net/assets/muller-capital.png",
     "image": "https://mullercapital.net/assets/lucas.jpg",
-    "description": "Palestras, treinamentos e consultoria em planejamento estratégico, negociação global e liderança.",
+    "description": "Consultoria, palestras e treinamentos em planejamento estratégico, sistemas de gestão de desempenho, negociação global e liderança.",
     "email": "lmuller@mullercapital.net",
     "telephone": "+55-41-98411-7807",
     "address": {
@@ -54,6 +56,10 @@
     "areaServed": { "@type": "Country", "name": "Brasil" },
     "knowsAbout": [
       "Planejamento estratégico",
+      "Gestão de desempenho",
+      "Sistema de indicadores",
+      "Indicadores de desempenho (KPIs)",
+      "Governança de execução",
       "Negociação internacional",
       "Liderança de equipes globais",
       "Procurement e gestão de fornecedores",
@@ -99,15 +105,16 @@
         <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Abrir menu">
           <span></span><span></span><span></span>
         </button>
+        <!-- NAV enxuta: 8 itens. "IA" e "Artigos" agora são páginas próprias.
+             "Em ação" e "Formação" saíram do menu (continuam na página, ao rolar). -->
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#gestao">Gestão</a></li>
           <li><a href="#metodo">Método</a></li>
-          <li><a href="#ia">IA</a></li>
           <li><a href="#servicos">Serviços</a></li>
           <li><a href="#resultados">Resultados</a></li>
-          <li><a href="#acao">Em ação</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#artigos">Artigos</a></li>
+          <li><a href="ia.html">IA</a></li>
+          <li><a href="artigos/index.html">Artigos</a></li>
           <li><a href="#contato" class="nav-cta">Fale comigo</a></li>
         </ul>
       </nav>
@@ -137,7 +144,6 @@
         </ul>
       </div>
       <div class="hero-figure">
-        <!-- Substitua o arquivo abaixo pela sua foto (assets/lucas.jpg) -->
         <div class="portrait" role="img" aria-label="Foto de Lucas Müller">
           <img src="assets/lucas.jpg" alt="Lucas Müller" onerror="this.style.display='none';this.parentNode.classList.add('portrait--placeholder')" />
           <span class="portrait-fallback">LM</span>
@@ -156,8 +162,6 @@
     <div class="container">
       <p class="logos-label">Experiência construída atendendo e negociando com líderes globais</p>
     </div>
-    <!-- Faixa animada (marquee). Para usar logos reais, troque o texto de cada <li>
-         por <img src="assets/logos/nome.svg" alt="Empresa" /> nos DOIS blocos .logos-track. -->
     <div class="logos-marquee">
       <ul class="logos-track">
         <li>Nestlé</li><li>Unilever</li><li>General Mills</li><li>Mondelez</li><li>Kerry</li>
@@ -217,7 +221,48 @@
     </div>
   </section>
 
-  <!-- ===================== MÉTODO BRIO ===================== -->
+  <!-- =========================================================
+       NOVA SEÇÃO — O GANCHO: GESTÃO DE DESEMPENHO
+       ========================================================= -->
+  <section id="gestao" class="section section--alt">
+    <div class="container">
+      <div class="gestao-head">
+        <p class="section-eyebrow">Gestão de desempenho</p>
+        <h2>
+          O plano estratégico costuma estar certo. O que falta é o sistema que transforma esse plano
+          em rotina — e que mostra, antes do fechamento, se ele está funcionando.
+        </h2>
+        <p>
+          A maior parte das empresas mede alguma coisa. Poucas medem as coisas certas, e menos ainda
+          sabem dizer de onde vem cada número, quem responde por ele e o que acontece quando ele piora.
+          A dificuldade quase nunca é montar um painel — é decidir o que deveria estar dentro dele.
+        </p>
+      </div>
+
+      <p class="sintomas-label">Como isso costuma aparecer no dia a dia</p>
+      <ul class="sintomas">
+        <li>O número só aparece no fechamento — e vem do contador, não da operação.</li>
+        <li>Cada diretor chega na reunião com a própria planilha, e os números não batem.</li>
+        <li>A reunião mensal discute o que aconteceu, não o que fazer a partir daqui.</li>
+        <li>As metas estão no plano estratégico e não aparecem em nenhuma rotina semanal.</li>
+        <li>Quando o resultado cai, a conversa vira busca por culpado em vez de busca pela causa.</li>
+        <li>Ninguém sabe dizer, sem pensar, qual indicador é responsabilidade de quem.</li>
+        <li>Se o diretor tira férias, a área simplesmente deixa de ser acompanhada.</li>
+      </ul>
+
+      <p class="sintomas-fecho">
+        Se três ou mais soam familiares, o gargalo provavelmente não está no time. Está na ausência de um
+        sistema que mostre, <strong>a tempo de corrigir</strong>, se o esforço está indo para o lugar certo.
+      </p>
+      <p class="gestao-cta">
+        <a href="#diagnostico">Ver como começamos: o Diagnóstico de Gestão &rarr;</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       MÉTODO BRIO — AGORA EM DUAS VERTENTES
+       ========================================================= -->
   <section id="metodo" class="section section--brio">
     <div class="container">
       <div class="section-head">
@@ -234,106 +279,134 @@
         <cite>— Clóvis de Barros Filho</cite>
       </blockquote>
 
-      <div class="brio-grid">
-        <article class="brio-card">
-          <span class="brio-letter">B</span>
-          <h3>Brilhante</h3>
+      <!-- Cabeçalhos das duas vertentes -->
+      <div class="brio-heads">
+        <div class="brio-head brio-head--left">
+          <span class="brio-head-tag">Vertente 1 · Mentoria</span>
+          <h3>No líder</h3>
+          <p>Sparring e mentoria para C-level, founders e conselho. O BRIO como postura de quem decide.</p>
+        </div>
+        <div aria-hidden="true"></div>
+        <div class="brio-head brio-head--right">
+          <span class="brio-head-tag">Vertente 2 · Consultoria</span>
+          <h3>Na empresa</h3>
+          <p>Instalação do sistema de gestão de desempenho. O BRIO como rotina que a operação segue.</p>
+        </div>
+      </div>
+
+      <!-- B -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">B</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Brilhante</h4>
           <p>De extrema originalidade e inventividade: soluções únicas e excelentes para seus clientes.</p>
-        </article>
-        <article class="brio-card">
-          <span class="brio-letter">R</span>
-          <h3>Resiliente</h3>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Base</h4>
+          <p>Onde a empresa está de verdade. O que já se mede, de onde vem cada número, e o que hoje é opinião circulando como dado.</p>
+          <span class="brio-out">Retrato honesto da situação atual</span>
+        </div>
+      </div>
+
+      <!-- R -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">R</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Resiliente</h4>
           <p>Flexibilidade para se adaptar a mudanças e lidar com desafios sob pressão.</p>
-        </article>
-        <article class="brio-card">
-          <span class="brio-letter">I</span>
-          <h3>Inovador</h3>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Resultado</h4>
+          <p>Onde se quer chegar e o que precisa ser verdade para chegar lá. Do resultado desejado para trás, até os poucos indicadores que cada área de fato controla.</p>
+          <span class="brio-out">Árvore de indicadores, com meta e dono</span>
+        </div>
+      </div>
+
+      <!-- I -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">I</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Inovador</h4>
           <p>Aplica novas ideias para melhorar cenários &amp; gerar resultados concretos.</p>
-        </article>
-        <article class="brio-card">
-          <span class="brio-letter">O</span>
-          <h3>Obsessivo</h3>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Instrumentos</h4>
+          <p>Como enxergar sem esperar o fechamento. Cálculo, fonte, frequência e responsável de cada indicador — e o painel onde eles vivem.</p>
+          <span class="brio-out">Painel rodando com dado real</span>
+        </div>
+      </div>
+
+      <!-- O -->
+      <div class="brio-row">
+        <span class="brio-big" aria-hidden="true">O</span>
+        <div class="brio-side brio-side--left">
+          <span class="brio-side-tag">No líder</span>
+          <h4>Obsessivo</h4>
           <p>Necessidade intensa de realizar, com compromisso vital pela entrega.</p>
-        </article>
+        </div>
+        <div class="brio-side brio-side--right">
+          <span class="brio-side-tag">Na empresa</span>
+          <h4>Operação</h4>
+          <p>Como corrigir a rota. Cadência de reuniões, quem decide o quê, e o que acontece quando um indicador fica vermelho.</p>
+          <span class="brio-out">Rotina de gestão que se sustenta sem você</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===================== IA APLICADA ===================== -->
-  <section id="ia" class="section">
-    <div class="container ia-grid">
-      <div class="ia-intro">
-        <p class="section-eyebrow">Inteligência Artificial</p>
-        <h2>IA aplicada ao resultado — não à demonstração.</h2>
-        <p class="ia-lead">
-          A maioria das empresas já testou IA. Poucas transformaram isso em decisão melhor,
-          custo menor ou receita maior. Meu trabalho é a ponte entre a ferramenta e o P&amp;L.
-        </p>
-        <a href="#contato" class="btn btn-primary">Conversar sobre IA na sua empresa</a>
-      </div>
-
-      <ol class="ia-list">
-        <li class="ia-item">
-          <span class="ia-num" aria-hidden="true">01</span>
-          <div class="ia-body">
-            <h3>Capacitação de times</h3>
-            <p>
-              Workshops práticos para times comerciais, de compras e de estratégia usarem IA no
-              trabalho real — não em teoria.
-            </p>
-            <ul class="card-list">
-              <li>Casos de uso por função (comercial, compras, supply)</li>
-              <li>Prompts e fluxos aplicados à rotina da equipe</li>
-              <li>Critérios de qualidade e verificação de respostas</li>
-              <li>Ganho de produtividade mensurável</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="ia-item">
-          <span class="ia-num" aria-hidden="true">02</span>
-          <div class="ia-body">
-            <h3>IA na estratégia e nas decisões</h3>
-            <p>
-              Como uso IA dentro dos meus próprios projetos de consultoria e advisory para
-              decidir mais rápido e com mais base.
-            </p>
-            <ul class="card-list">
-              <li>Inteligência de mercado e benchmarking</li>
-              <li>Análise de cenários e simulações</li>
-              <li>Should-cost, TCO e preparação de negociação</li>
-              <li>Leitura de grandes volumes de dados em horas, não semanas</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="ia-item">
-          <span class="ia-num" aria-hidden="true">03</span>
-          <div class="ia-body">
-            <h3>Uso executivo de IA — C-Level &amp; Board</h3>
-            <p>
-              Sessões fechadas para diretoria e conselho: o que a IA realmente muda no negócio,
-              sem hype e sem jargão técnico.
-            </p>
-            <ul class="card-list">
-              <li>O que muda — e o que não muda — na estratégia</li>
-              <li>Onde investir agora e onde esperar</li>
-              <li>Governança, risco e conformidade</li>
-              <li>IA no dia a dia do próprio executivo</li>
-            </ul>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+  <!-- A seção de IA fica em ia.html (página própria).
+       Na home ela reaparece resumida, na faixa depois dos Serviços. -->
 
   <!-- ===================== SERVIÇOS ===================== -->
   <section id="servicos" class="section section--alt">
     <div class="container">
       <div class="section-head">
         <p class="section-eyebrow">Serviços</p>
-        <h2>Quatro formas de trabalharmos juntos.</h2>
-        <p class="section-sub">Da inspiração à transformação — escolha o formato que sua empresa precisa.</p>
+        <h2>Por onde começar — e como seguir.</h2>
+        <p class="section-sub">Um diagnóstico curto abre o caminho. Depois, o formato que sua empresa precisa.</p>
+      </div>
+
+      <!-- =====================================================
+           FAIXA: DIAGNÓSTICO DE GESTÃO (porta de entrada)
+           =====================================================
+           ⚠️ PREÇO ABAIXO É PLACEHOLDER — inventado só para você
+           avaliar o layout. Trocar pelo valor real, ou substituir o
+           bloco .diag-price por "Sob consulta" (ver README do commit).
+      -->
+      <div class="diagnostico" id="diagnostico">
+        <div>
+          <span class="diag-tag">Porta de entrada</span>
+          <h3>Diagnóstico de Gestão</h3>
+          <p class="diag-desc">
+            Três semanas para responder a duas perguntas que a maioria das empresas não consegue responder
+            com segurança: <strong>o que precisa ser medido</strong> para chegar ao resultado que vocês
+            querem, e <strong>o que falta hoje</strong> para conseguir enxergar isso a tempo de corrigir.
+          </p>
+          <ul class="diag-list">
+            <li>Mapeamento do que já se mede — e do que circula como dado sem ser dado</li>
+            <li>Árvore de indicadores: do resultado desejado até o que cada área controla</li>
+            <li>Meta e dono definidos para cada número que importa</li>
+            <li>Plano de instalação: o que fazer, em que ordem, com que esforço</li>
+          </ul>
+        </div>
+        <div class="diag-box">
+          <span class="diag-price-label">Investimento</span>
+          <span class="diag-price">R$ 43.900</span>
+          <span class="diag-price-unit">valor fechado, sem hora extra</span>
+          <ul class="diag-meta">
+            <li><span>Prazo</span> 3 semanas</li>
+            <li><span>Formato</span> remoto ou presencial</li>
+            <li><span>Entrega</span> relatório + árvore de indicadores + plano</li>
+            <li class="diag-meta-hi"><span>Reembolso</span> 100% do valor reembolsável em caso de tornar-se Projeto</li>
+          </ul>
+          <a href="#contato" class="btn btn-primary btn-block">Começar pelo diagnóstico</a>
+        </div>
       </div>
 
       <div class="cards">
@@ -378,32 +451,32 @@
           <a href="#contato" class="card-link">Montar um treinamento &rarr;</a>
         </article>
 
-        <!-- Consultoria -->
+        <!-- Consultoria — REESCRITA: plano + sistema de gestão (BRIO: I + O) -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">📈</div>
           <h3>Consultoria em Planejamento Estratégico</h3>
-          <p>Acompanhamento próximo para desenhar e implementar o plano estratégico da sua empresa — do diagnóstico à execução com governança.</p>
+          <p>O plano estratégico e — principalmente — o sistema que faz esse plano acontecer: indicadores, painel e a rotina que corrige a rota antes do fechamento.</p>
           <ul class="card-list">
-            <li>Diagnóstico estratégico e análise de mercado</li>
-            <li>Desenho do plano e definição de metas</li>
-            <li>Governança de execução (rituais, KPIs, cadência)</li>
-            <li>Otimização de portfólio e value engineering</li>
+            <li>Diagnóstico estratégico e desenho do plano</li>
+            <li>Árvore de indicadores: o que medir, com meta e dono por área</li>
+            <li>Painel de gestão com dado real, sem esperar o fechamento</li>
+            <li>Rituais de execução — cadência, decisão e correção de rota</li>
           </ul>
           <p class="card-aud"><span>Para:</span> conselhos, C-level e empresas em transformação.</p>
-          <p class="card-price"><span class="card-price-value card-price-value--consult">Sob consulta</span><span class="card-price-unit">projeto sob medida</span></p>
+          <p class="card-price"><span class="card-price-value card-price-value--consult">Sob consulta</span><span class="card-price-unit">projeto sob medida · a partir do diagnóstico</span></p>
           <a href="#contato" class="card-link">Iniciar um projeto &rarr;</a>
         </article>
 
-        <!-- Advisor & Operating Partner -->
+        <!-- Advisor — REESCRITA: quem roda a cadência junto -->
         <article class="card">
           <div class="card-icon" aria-hidden="true">🤝</div>
           <h3>Advisor &amp; Operating Partner</h3>
-          <p>Apoio recorrente ao board, founders e à alta liderança — uma visão externa e experiente para decisões de crescimento, capital e estratégia de longo prazo.</p>
+          <p>Depois de instalado, o sistema precisa de alguém que o faça rodar. Conduzo a cadência de gestão junto com a liderança — e ocupo a cadeira de visão externa nas decisões de crescimento.</p>
           <ul class="card-list">
+            <li>Condução da cadência de gestão (mensal e trimestral)</li>
             <li>Assento consultivo em conselho (advisory board)</li>
-            <li>Mentoria e sparring estratégico de C-level</li>
+            <li>Mentoria e sparring estratégico de C-level e founders</li>
             <li>Apoio em crescimento, M&amp;A e expansão internacional</li>
-            <li>Governança, rede de contatos e acesso global</li>
           </ul>
           <p class="card-aud"><span>Para:</span> conselhos, founders e empresas em expansão.</p>
           <p class="card-price"><span class="card-price-value card-price-value--consult">Sob consulta</span><span class="card-price-unit">retainer mensal ou por mandato</span></p>
@@ -413,8 +486,37 @@
     </div>
   </section>
 
+  <!-- =========================================================
+       FAIXA — as duas páginas que saíram da home
+       ========================================================= -->
+  <section class="section section--slim" aria-label="Mais conteúdo">
+    <div class="container">
+      <div class="explore">
+        <a class="explore-tile" href="ia.html">
+          <span class="explore-eyebrow">Inteligência Artificial</span>
+          <h3>IA aplicada ao resultado — não à demonstração.</h3>
+          <p>
+            A maioria das empresas já testou IA. Poucas transformaram isso em decisão melhor,
+            custo menor ou receita maior. Capacitação de times, IA na estratégia e sessões
+            fechadas para C-level e conselho.
+          </p>
+          <span class="explore-seta">Ver como trabalho IA &rarr;</span>
+        </a>
+        <a class="explore-tile" href="artigos/index.html">
+          <span class="explore-eyebrow">Artigos &amp; materiais</span>
+          <h3>Conteúdo prático, do jeito que se usa na segunda-feira.</h3>
+          <p>
+            Frameworks e checklists que uso em treinamentos e projetos — negociação, cultura,
+            IA na decisão executiva. Abertos, sem cadastro.
+          </p>
+          <span class="explore-seta">Ler os artigos &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== RESULTADOS ===================== -->
-  <section id="resultados" class="section">
+  <section id="resultados" class="section section--alt">
     <div class="container">
       <div class="section-head">
         <p class="section-eyebrow">Resultados</p>
@@ -426,7 +528,7 @@
         <span class="result-banner-to">R$ 40 milhões em 5 anos</span>
       </div>
 
-      <figure class="growth-chart" aria-label="Gráfico de crescimento de receita: 400% em cinco anos">
+      <figure class="growth-chart growth-chart--last" aria-label="Gráfico de crescimento de receita: 400% em cinco anos">
         <figcaption class="growth-title">Crescimento de receita — <strong>+400% em 5 anos</strong></figcaption>
         <div class="growth-bars">
           <div class="growth-bar" style="--h: 20%"><span class="growth-val">1x</span></div>
@@ -440,22 +542,13 @@
         </div>
       </figure>
 
-      <div class="stats">
-        <div class="stat"><span class="stat-num">R$ 2,5 bi</span><span class="stat-label">em negócios negociados</span></div>
-        <div class="stat"><span class="stat-num">400%</span><span class="stat-label">de crescimento em 5 anos</span></div>
-        <div class="stat"><span class="stat-num">+500</span><span class="stat-label">profissionais treinados</span></div>
-        <div class="stat"><span class="stat-num">+20</span><span class="stat-label">mentorados</span></div>
-        <div class="stat"><span class="stat-num">+10</span><span class="stat-label">startups como advisor</span></div>
-        <div class="stat"><span class="stat-num">+2.000</span><span class="stat-label">acordos comerciais geridos</span></div>
-        <div class="stat"><span class="stat-num">27</span><span class="stat-label">profissionais liderados</span></div>
-        <div class="stat"><span class="stat-num">7,4%</span><span class="stat-label">de savings médio em categorias-chave</span></div>
-        <div class="stat"><span class="stat-num">33%</span><span class="stat-label">de redução de exposição a risco</span></div>
-      </div>
+      <!-- A grade de 9 estatísticas saiu daqui: vira material de apresentação comercial.
+           Os três números de topo (+15 anos, R$ 2,5 bi, +25 países) seguem no hero. -->
     </div>
   </section>
 
   <!-- ===================== EM AÇÃO / GALERIA ===================== -->
-  <section id="acao" class="section section--alt">
+  <section id="acao" class="section">
     <div class="container">
       <div class="section-head">
         <p class="section-eyebrow">Em ação</p>
@@ -504,7 +597,7 @@
     </div>
   </section>
 
-  <!-- ===================== LIGHTBOX (ampliar fotos) ===================== -->
+  <!-- ===================== LIGHTBOX ===================== -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" hidden>
     <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">&times;</button>
     <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">&#8249;</button>
@@ -515,58 +608,8 @@
     <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Próxima">&#8250;</button>
   </div>
 
-  <!-- ===================== ARTIGOS ===================== -->
-  <section id="artigos" class="section">
-    <div class="container">
-      <div class="section-head">
-        <p class="section-eyebrow">Artigos</p>
-        <h2>Conteúdo prático, do jeito que se usa na segunda-feira.</h2>
-        <p class="section-sub">
-          Frameworks e checklists que uso em treinamentos e projetos — abertos, sem cadastro.
-        </p>
-      </div>
-
-      <!-- Cards dos artigos mais recentes. A lista completa fica em /artigos/ -->
-      <ul class="artigos-cards">
-        <li class="artigo-card">
-          <a class="artigo-link" href="artigos/ia-decisao-executiva.html">
-            <span class="artigo-tag">IA &amp; Decisão Executiva</span>
-            <span class="artigo-titulo">Sua empresa adotou IA. O P&amp;L não percebeu.</span>
-            <span class="artigo-resumo">
-              As quatro camadas em que a IA muda de fato a decisão de quem dirige a empresa.
-            </span>
-            <span class="artigo-seta">Ler artigo &rarr;</span>
-          </a>
-        </li>
-        <li class="artigo-card">
-          <a class="artigo-link" href="artigos/cultura-do-futuro.html">
-            <span class="artigo-tag">Liderança · Cultura</span>
-            <span class="artigo-titulo">Cultura do Futuro</span>
-            <span class="artigo-resumo">
-              Paciência estratégica, autonomia e sucessão como fundamentos de uma empresa
-              preparada para o longo prazo.
-            </span>
-            <span class="artigo-seta">Ler artigo &rarr;</span>
-          </a>
-        </li>
-        <li class="artigo-card">
-          <a class="artigo-link" href="artigos/preparacao-negociacao.html">
-            <span class="artigo-tag">Negociação</span>
-            <span class="artigo-titulo">Preparação de negociação: quem fecha e quem cede</span>
-            <span class="artigo-resumo">
-              O roteiro de preparação e os quatro números que você precisa ter na mão
-              antes da reunião.
-            </span>
-            <span class="artigo-seta">Ler artigo &rarr;</span>
-          </a>
-        </li>
-      </ul>
-
-      <p class="artigos-cta">
-        <a href="artigos/index.html" class="btn btn-primary">Ver todos os artigos</a>
-      </p>
-    </div>
-  </section>
+  <!-- A seção de Artigos saiu daqui: virou aba no menu (/artigos/)
+       e um dos dois quadros da faixa depois dos Serviços. -->
 
   <!-- ===================== FORMAÇÃO ===================== -->
   <section id="formacao" class="section section--alt">
@@ -650,7 +693,6 @@
         </ul>
       </div>
 
-      <!-- Formulário: envia via Formspree direto para lmuller@mullercapital.net (ver README) -->
       <form class="contact-form" id="contact-form" action="https://formspree.io/f/xoeqajvz" method="POST">
         <div class="field">
           <label for="nome">Nome</label>
@@ -666,7 +708,9 @@
         </div>
         <div class="field">
           <label for="interesse">Tenho interesse em</label>
+          <!-- NOVO: o diagnóstico entra como primeira opção -->
           <select id="interesse" name="interesse">
+            <option value="Diagnóstico de Gestão">Diagnóstico de Gestão</option>
             <option value="Palestra">Palestra / Keynote</option>
             <option value="Treinamento">Treinamento / Workshop</option>
             <option value="Consultoria">Consultoria em Planejamento Estratégico</option>
@@ -678,9 +722,7 @@
           <label for="mensagem">Mensagem</label>
           <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o evento ou desafio..." required></textarea>
         </div>
-        <!-- Assunto do e-mail que chega na sua caixa. O JS atualiza com o interesse escolhido. -->
         <input type="hidden" name="_subject" id="form-subject" value="Contato pelo site — Muller Capital" />
-        <!-- Anti-spam: campo invisível. Pessoas não preenchem; robôs sim. Não remover. -->
         <div class="field-hp" aria-hidden="true">
           <label for="_gotcha">Deixe este campo em branco</label>
           <input type="text" id="_gotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
